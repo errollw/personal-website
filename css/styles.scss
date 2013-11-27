@@ -1,0 +1,12 @@
+$visual-grid: true;
+
+@import "bourbon/bourbon";
+@import "grid-settings";
+@import "neat/neat";
+
+// Enter Neat
+section {
+  @include outer-container;
+  aside { @include span-columns(3); }
+  article { @include span-columns(9); }
+}
