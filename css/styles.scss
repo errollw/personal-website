@@ -40,10 +40,16 @@ div.page {
   	@include span-columns(3);
   }
 
-  article {
-  	padding: 24px 0;
-  	//@include shift(3);
+  section {
+  	padding: 24px 24px 0 0;
   	@include span-columns(9);
+
+  	article {
+  		@include span-columns(6 of 9);
+  	}
+  	aside {
+  		@include span-columns(3 of 9);
+  	}
   }
 
 }

@@ -40,14 +40,28 @@ div.page {
     width: 23.40426%; }
     div.page nav:last-child {
       margin-right: 0; }
-  div.page article {
-    padding: 24px 0;
+  div.page section {
+    padding: 24px 24px 0 0;
     float: left;
     display: block;
     margin-right: 2.12766%;
     width: 74.46809%; }
-    div.page article:last-child {
+    div.page section:last-child {
       margin-right: 0; }
+    div.page section article {
+      float: left;
+      display: block;
+      margin-right: 2.85714%;
+      width: 65.71429%; }
+      div.page section article:last-child {
+        margin-right: 0; }
+    div.page section aside {
+      float: left;
+      display: block;
+      margin-right: 2.85714%;
+      width: 31.42857%; }
+      div.page section aside:last-child {
+        margin-right: 0; }
 
 nav {
   padding: 24px 0 0 24px; }
