@@ -8,6 +8,11 @@ $font-text: 'Open Sans', sans-serif;
 $font-title: 'Roboto Slab', serif;
 $font-mono: 'Anonymous Pro', sans-serif;
 
+$blue: #0090e0;
+$red:  #e4141b;
+
+$padding: 28px;
+
 body {
 	font-family: $font-text;
 }
@@ -15,10 +20,18 @@ body {
 ul {
 	list-style-type: none;
 	padding: 0;
-	margin: 12px 0;
+	
 	font-size: 14px;
 
-	li.spacer { height: 6px}
+	li.spacer { height: $padding/4}
+
+	a, a:visited, a:hover, a:active {
+		color: inherit;
+		text-decoration: none;
+	}
+	a:hover, a:active {
+		background: tint($blue, 85%);
+	}
 }
 
 h1 {
@@ -26,10 +39,10 @@ h1 {
 	font-size: 24px;
 	line-height: 100%;
 	font-weight: 300;
-	margin: 0;
+	margin: 0 0 $padding/2 0;
 
-	padding-bottom: 12px;
-	border-bottom: 1px solid black;
+	padding-bottom: $padding/2;
+	border-bottom: 1px solid;
 }
 
 div.page {
@@ -41,20 +54,52 @@ div.page {
   }
 
   section {
-  	padding: 24px 24px 0 0;
+
+  	padding: $padding $padding 0 0;
   	@include span-columns(9);
 
-  	article {
-  		@include span-columns(6 of 9);
-  	}
+  	font-size: 12px;
+
   	aside {
   		@include span-columns(3 of 9);
+  		@include omega();
+
+  		color: $red;
   	}
   }
 
 }
 
+article {
+
+	margin: 0 0 $padding/2 0;
+
+	@include span-columns(6 of 9);
+
+	article {
+		margin: 0;
+		@include span-columns(3 of 6);
+	}
+
+	a, a:visited, a:hover, a:active {
+		color: inherit;
+		text-decoration: underline;
+	}
+}
+
 nav {
-	padding: 24px 0 0 24px ;
+	color: $blue;
+	padding: $padding 0 0 $padding ;
 	//position: fixed;
+}
+
+.prof-pic {
+	height: 100px;
+	background-image: url("../img/profile_1x1.jpg");
+	background-position: center center;
+	background-size: cover;
+}
+
+p {
+	margin: 0 0 1em 0;
 }
