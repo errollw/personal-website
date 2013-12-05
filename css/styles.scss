@@ -1,12 +1,54 @@
-$visual-grid: true;
+//$visual-grid: true;
 
 @import "bourbon/bourbon";
 @import "grid-settings";
 @import "neat/neat";
 
-// Enter Neat
-section {
+$font-text: 'Open Sans', sans-serif;
+$font-title: 'Roboto Slab', serif;
+$font-mono: 'Anonymous Pro', sans-serif;
+
+body {
+	font-family: $font-text;
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 12px 0;
+	font-size: 14px;
+
+	li.spacer { height: 6px}
+}
+
+h1 {
+	font-family: $font-title;
+	font-size: 24px;
+	line-height: 100%;
+	font-weight: 300;
+	margin: 0;
+
+	padding-bottom: 12px;
+	border-bottom: 1px solid black;
+}
+
+div.page {
+
   @include outer-container;
-  aside { @include span-columns(3); }
-  article { @include span-columns(9); }
+
+  nav {
+  	@include span-columns(3);
+  }
+
+  article {
+  	padding: 24px 0;
+  	//@include shift(3);
+  	@include span-columns(9);
+  }
+
+}
+
+nav {
+	padding: 24px 0 0 24px ;
+	//position: fixed;
 }
