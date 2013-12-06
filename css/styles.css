@@ -5,27 +5,30 @@
 
 body {
   font-family: "Open Sans", sans-serif; }
-
-ul {
-  list-style-type: none;
-  padding: 0;
-  font-size: 14px; }
-  ul li.spacer {
-    height: 7px; }
-  ul a, ul a:visited, ul a:hover, ul a:active {
+  body a, body a:visited, body a:hover, body a:active {
     color: inherit;
     text-decoration: none; }
-  ul a:hover, ul a:active {
-    background: #d8eefa; }
 
 h1 {
   font-family: "Roboto Slab", serif;
   font-size: 24px;
   line-height: 100%;
   font-weight: 300;
-  margin: 0 0 14px 0;
-  padding-bottom: 14px;
+  margin: 0 0 16px 0;
+  padding-bottom: 0.5em;
   border-bottom: 1px solid; }
+
+h2 {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 0 16px 0;
+  padding-bottom: 0.5em;
+  border-bottom: 1px dotted; }
+
+h3 {
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0 0 16px 0; }
 
 div.page {
   *zoom: 1;
@@ -45,32 +48,32 @@ div.page {
     div.page nav:last-child {
       margin-right: 0; }
   div.page section {
-    padding: 28px 28px 0 0;
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 74.41059%;
-    font-size: 12px; }
+    margin-left: 25.58941%;
+    padding: 32px 32px 0 0;
+    font-size: 13px; }
     div.page section:last-child {
       margin-right: 0; }
-    div.page section aside {
-      float: left;
-      display: block;
-      margin-right: 3.16844%;
-      width: 31.22104%;
-      margin-right: 0;
-      color: #e4141b; }
-      div.page section aside:last-child {
-        margin-right: 0; }
 
 article {
-  margin: 0 0 14px 0;
+  margin: 0 0 32px 0;
   float: left;
   display: block;
   margin-right: 3.16844%;
   width: 65.61052%; }
   article:last-child {
     margin-right: 0; }
+  article p.stretch {
+    float: left;
+    display: block;
+    margin-right: 4.82916%;
+    width: 100%;
+    margin-right: 0; }
+    article p.stretch:last-child {
+      margin-right: 0; }
   article article {
     margin: 0;
     float: left;
@@ -79,13 +82,59 @@ article {
     width: 47.58542%; }
     article article:last-child {
       margin-right: 0; }
+    article article:nth-child(2n) {
+      margin-right: 0; }
+    article article:nth-child(2n+1) {
+      clear: left; }
   article a, article a:visited, article a:hover, article a:active {
     color: inherit;
     text-decoration: underline; }
+  article p {
+    margin: 0 0 1em 0; }
+  article ul {
+    list-style-type: none;
+    padding: 0 0 0 1em;
+    margin: 0 0 1em 0; }
+    article ul a, article ul a:visited, article ul a:hover, article ul a:active {
+      color: inherit;
+      text-decoration: none; }
+    article ul a:hover, article ul a:active {
+      background: #d8eefa; }
+  article p:last-child, article ul:last-child {
+    margin: 0; }
+  article li:before {
+    content: "\00B7";
+    position: relative;
+    left: -0.6em;
+    top: 0; }
+
+aside {
+  float: left;
+  display: block;
+  margin-right: 3.16844%;
+  width: 31.22104%;
+  margin-right: 0;
+  color: #e4141b; }
+  aside:last-child {
+    margin-right: 0; }
 
 nav {
+  position: fixed;
+  max-width: 253px;
+  box-sizing: border-box;
   color: #0090e0;
-  padding: 28px 0 0 28px; }
+  padding: 32px 0 0 32px;
+  font-size: 14px; }
+  nav ul {
+    list-style-type: none;
+    padding: 0; }
+    nav ul li.spacer {
+      height: 8px; }
+    nav ul a, nav ul a:visited, nav ul a:hover, nav ul a:active {
+      color: inherit;
+      text-decoration: none; }
+    nav ul a:hover, nav ul a:active {
+      background: #d8eefa; }
 
 .prof-pic {
   height: 100px;
@@ -93,5 +142,9 @@ nav {
   background-position: center center;
   background-size: cover; }
 
-p {
-  margin: 0 0 1em 0; }
+#index_list {
+  list-style-type: none;
+  padding: 0;
+  font-size: 14px; }
+  #index_list a:hover, #index_list a:active {
+    background: #fadbdc; }
