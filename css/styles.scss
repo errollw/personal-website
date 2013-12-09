@@ -118,10 +118,6 @@ article {
 		list-style-type: none;
 		padding: 0 0 0 1em;
 		margin: 0 0 1em 0;
-
-		a:hover, a:active {
-			background: tint($blue, 85%);
-		}
 	}
 
 	li:before { 

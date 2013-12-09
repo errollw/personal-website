@@ -117,8 +117,6 @@ article {
     list-style-type: none;
     padding: 0 0 0 1em;
     margin: 0 0 1em 0; }
-    article ul a:hover, article ul a:active {
-      background: #d8eefa; }
   article li:before {
     content: "\00B7";
     position: relative;
