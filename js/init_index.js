@@ -6,7 +6,6 @@ $(function () {
 	// find unordered-index list
 	var $index_list = $('#index_list')
 
-
 	$('article h1').each(function(index){
 
 		var $target = $(this);
@@ -21,7 +20,6 @@ $(function () {
 				'offset': -page_padding
 			});
 		});
-
 	});
 
 });
