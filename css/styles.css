@@ -50,6 +50,9 @@ h3 {
 h1, h2, h3 {
   margin-right: 0; }
 
+li.spacer {
+  height: 8px; }
+
 section {
   float: left;
   display: block;
@@ -114,9 +117,6 @@ article {
     list-style-type: none;
     padding: 0 0 0 1em;
     margin: 0 0 1em 0; }
-    article ul a, article ul a:visited, article ul a:hover, article ul a:active {
-      color: inherit;
-      text-decoration: none; }
     article ul a:hover, article ul a:active {
       background: #d8eefa; }
   article li:before {
@@ -150,8 +150,6 @@ nav {
   nav ul {
     list-style-type: none;
     padding: 0; }
-    nav ul li.spacer {
-      height: 8px; }
     nav ul a, nav ul a:visited {
       color: inherit;
       text-decoration: none; }
@@ -170,3 +168,6 @@ nav {
   #index_list span:hover, #index_list span:active {
     cursor: pointer;
     background: #fadbdc; }
+  #index_list li.subitem {
+    font-size: 13px;
+    padding: 0 0 0 1em; }

@@ -68,6 +68,10 @@ h1, h2, h3 {
 	@include omega();
 }
 
+li.spacer {
+	height: $padding/4
+}
+
 section {
   	@include span-columns(9);
   	@include shift(3);
@@ -115,10 +119,6 @@ article {
 		padding: 0 0 0 1em;
 		margin: 0 0 1em 0;
 
-		a, a:visited, a:hover, a:active {
-			color: inherit;
-			text-decoration: none;
-		}
 		a:hover, a:active {
 			background: tint($blue, 85%);
 		}
@@ -152,8 +152,6 @@ nav {
 		list-style-type: none;
 		padding: 0;
 
-		li.spacer { height: $padding/4}
-
 		a, a:visited {
 			color: inherit;
 			text-decoration: none;
@@ -178,5 +176,10 @@ nav {
 	span:hover, span:active {
 		cursor: pointer;
 		background: tint($red, 85%);
+	}
+
+	li.subitem {
+		font-size: 13px;
+		padding: 0 0 0 1em;
 	}
 }

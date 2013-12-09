@@ -1,4 +1,5 @@
-var PAGE_PADDING_PX = 32,
+var H1_PADDING_PX = 32,
+	H2_PADDING_PX = 42,
 	SCROLL_DURATION = 200;
 
 function resize_page(){
@@ -8,9 +9,10 @@ function resize_page(){
 		$(this).height($(this).width());
 	});
 
+	// add margin so user can scroll to last articles
 	var view_h = $(window).height(),
 		$last_art = $('section>article:last-child');
-	$last_art.css('margin-bottom', view_h-$last_art.height())
+	$last_art.css('margin-bottom', view_h-$last_art.height());
 }
 
 function init_index(){
@@ -19,18 +21,26 @@ function init_index(){
 	var $index_list = $('#index_list')
 
 	// loop through each upper level h1 article and add to index
-	$('article h1').each(function(index){
+	$('article h1, article h2').each(function(index){
 
 		var $target = $(this);
 			$item_text = $('<span>').text($target.text());
 			$index_item = $('<li>');
+
+		// add spacers between h1s
+		if ($target.is('h1') && index > 0)
+			$index_list.append($('<li>', {class: 'spacer'}));
+
+		// make h2s a bit smaller
+		if ($target.is('h2'))
+			$index_item.addClass('subitem');
 
 		$index_list.append($index_item.append($item_text));
 
 		$index_item.click(function(){
 			$.scrollTo($target, {
 				'duration': SCROLL_DURATION,
-				'offset': -PAGE_PADDING_PX
+				'offset': $target.is('h1') ? -H1_PADDING_PX : -H2_PADDING_PX
 			});
 		});
 	});
@@ -49,7 +59,7 @@ function init_nav(){
 		});
 	}
 
-	$('nav').load('nav.html', callback);	
+	$('nav').load('/nav.html', callback);	
 }
 
 //Runs once page is loaded
