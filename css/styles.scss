@@ -1,4 +1,4 @@
-$visual-grid: true;
+// $visual-grid: true;
 
 @import "bourbon/bourbon";
 @import "grid-settings";
@@ -10,6 +10,7 @@ $font-mono: 'Anonymous Pro', sans-serif;
 
 $blue: #0090e0;
 $red:  #e4141b;
+$grey: darken(whitesmoke, 5%);
 
 $padding: 32px;
 
@@ -27,6 +28,13 @@ body {
 // outer container for page
 div.page {
   @include outer-container;
+}
+
+.mono {
+	font-size: 110%;
+	padding: 2px 4px;
+	background-color: $grey;
+	font-family: $font-mono;
 }
 
 // headers used for main indexable titles
@@ -56,6 +64,10 @@ h3 {
 	margin: 0 0 1em 0;
 }
 
+h1, h2, h3 {
+	@include omega();
+}
+
 section {
   	@include span-columns(9);
   	@include shift(3);
@@ -77,9 +89,12 @@ article {
 	}
 
 	article {
-		margin: 0;
+		margin: 0 0 $padding/2 0;
 		@include span-columns(3 of 6);
 		@include omega(2n);
+
+		&.subart_big { @include span-columns(4 of 6); }
+		&.subart_sml { @include span-columns(2 of 6); }
 	}
 
 	a, a:visited, a:hover, a:active {
@@ -89,6 +104,10 @@ article {
 
 	p {
 		margin: 0 0 1em 0;
+	}
+
+	p:last-child, ul:last-child {
+		margin:0;
 	}
 
 	ul {
@@ -103,10 +122,6 @@ article {
 		a:hover, a:active {
 			background: tint($blue, 85%);
 		}
-	}
-
-	p:last-child, ul:last-child {
-		margin:0;
 	}
 
 	li:before { 
@@ -139,18 +154,17 @@ nav {
 
 		li.spacer { height: $padding/4}
 
-		a, a:visited, a:hover, a:active {
+		a, a:visited {
 			color: inherit;
 			text-decoration: none;
 		}
-		a:hover, a:active {
+		a:hover, a:active, a.toggled {
 			background: tint($blue, 85%);
 		}
 	}
 }
 
 .prof-pic {
-	height: 100px;
 	background-image: url("../img/profile_1x1.jpg");
 	background-position: center center;
 	background-size: cover;
@@ -161,7 +175,8 @@ nav {
 	padding: 0;
 	font-size: 14px;
 
-	a:hover, a:active {
+	span:hover, span:active {
+		cursor: pointer;
 		background: tint($red, 85%);
 	}
 }

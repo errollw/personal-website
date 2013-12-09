@@ -3,19 +3,24 @@
   <head>
     <meta charset="utf-8">
 
+    <!-- for testing with IIS -->
+    <base href="http://localhost/mysite/">
+
+    <!-- fetch fonts -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700|Roboto+Slab:400,300,700|Anonymous+Pro:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 
-    <title>Site Name</title>
+    <title>Erroll Wood</title>
 
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
+    <!-- stylesheets -->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
 
-    <!-- Javascript -->
-    <script type='text/javascript' src='js/jquery-1.10.2.min.js'></script>
+    <!-- javascript -->
+    <script type='text/javascript' src='js/jquery-2.0.3.js'></script>
     <script type='text/javascript' src='js/jquery.scrollTo-1.4.3.1-min.js'></script>
-    <script type='text/javascript' src='js/init_index.js'></script>
+    <script type='text/javascript' src='js/init_site.js'></script>
 
   </head>
 
@@ -23,41 +28,35 @@
 
     <div class='page'>
 
+      <!-- nav contents loaded here -->
       <nav>
         <h1>Erroll Wood</h1>
-        <ul>
-          <li> <a href=""> About me </a> </li>
-          <li class='spacer'></li> 
-          <li> <a href=""> Research </a> </li>
-          <li> <a href=""> Teaching </a>  </li>
-          <li class='spacer'></li>
-          <li> <a href=""> Other projects </a>  </li>
-          <li class='spacer'></li>
-          <li> <a href=""> Github </a> </li>
-        </ul>
       </nav>
 
       <section>
 
         <article>
-          <h1>About me</h1>
+          <h1>About</h1>
 
-          <p class='stretch'> I am a PhD student in the <a href="http://www.cl.cam.ac.uk/research/rainbow/">Rainbow Group</a> (graphics &amp; interaction) at the University of Cambridge <a href="http://www.cl.cam.ac.uk/">Computer Laboratory</a>. </p>
+          <p></p> <!-- empty child to fix for omega(2n) -->
 
-          <article>
+          <article class='subart_big'>
 
             <p> I am a PhD student in the <a href="http://www.cl.cam.ac.uk/research/rainbow/">Rainbow Group</a> (graphics &amp; interaction) at the University of Cambridge <a href="http://www.cl.cam.ac.uk/">Computer Laboratory</a>. </p>
 
-            <p> Current interests ... </p>
+            <p> My supervisor is <a href="http://www.cl.cam.ac.uk/~pr10/">Professor Peter Robinson</a>. </p>
+
+            <p> Current research interests include eye-gaze tracking, attentive user interfaces, large displays, and casual networked public-display communication. </p>
 
           </article>
 
-          <article class='prof-pic'></article>
+          <article class='prof-pic square subart_sml'></article>
 
         </article>
 
         <aside>
           <h1>Index</h1>
+          <ul id = 'index_list'></ul>
         </aside>
 
         <article>
