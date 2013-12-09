@@ -2,6 +2,7 @@ var H1_PADDING_PX = 32,
 	H2_PADDING_PX = 42,
 	SCROLL_DURATION = 200;
 
+
 function resize_page(){
 
 	// adjust height so '.square' items are so
@@ -11,9 +12,10 @@ function resize_page(){
 
 	// add margin so user can scroll to last articles
 	var view_h = $(window).height(),
-		$last_art = $('section>article:last-child');
+		$last_art = $('section>article:last-child, section>aside:last-child');
 	$last_art.css('margin-bottom', view_h-$last_art.height());
 }
+
 
 function init_index(){
 
@@ -46,6 +48,7 @@ function init_index(){
 	});
 }
 
+
 function init_nav(){
 
 	// callback function to highlight visited page
@@ -54,6 +57,8 @@ function init_nav(){
 		// loop though all nav links, add '.toggled' if url includes href
 		$('nav a').each(function(){
 			var href = $(this).attr('href');
+			href = href.replace(/[\\]/g,"");	// strip punctuation
+			console.log(href)
 			if (document.URL.indexOf(href) !== -1)
 				$(this).addClass('toggled')
 		});
@@ -61,6 +66,7 @@ function init_nav(){
 
 	$('nav').load('/nav.html', callback);	
 }
+
 
 //Runs once page is loaded
 $(function () {
