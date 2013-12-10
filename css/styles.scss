@@ -120,7 +120,12 @@ article {
 		margin: 0 0 1em 0;
 	}
 
-	li:before { 
+	ol {
+		padding: 0 0 0 1.8em;
+		margin: 0 0 1.8em 0;
+	}
+
+	ul > li:before { 
 	    content: "\00B7";
 	    position: relative;
 	    left: -0.6em;
@@ -133,6 +138,11 @@ aside {
 	@include omega();
 
 	color: $red;
+
+	a, a:visited, a:hover, a:active {
+		color: inherit;
+		text-decoration: underline;
+	}
 }
 
 nav {
