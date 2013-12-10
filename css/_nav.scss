@@ -1,0 +1,20 @@
+
+nav {
+	position: fixed;			            // fixed position navbar
+	@include span-columns(3);
+
+	max-width: 253px;			            // hack to stop it getting too large
+	
+	color: $blue;
+	padding: $padding 0 0 $padding ;		
+	font-size: 14px;
+	
+	ul {
+		list-style-type: none;				// remove bullet points
+		padding: 0;
+
+		a:hover, a:active, a.toggled {
+			background: tint($blue, 85%);	// highlight on hover
+		}
+	}
+}

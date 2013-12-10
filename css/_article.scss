@@ -1,0 +1,61 @@
+
+// Used inside main section for article content
+article {
+
+	margin-bottom: $padding;
+
+	@include span-columns(6 of 9);
+
+	article {
+		margin-bottom: $padding/2;
+		@include span-columns(3 of 6);
+		@include omega(2n);
+
+		&.subart_big { @include span-columns(4 of 6); }
+		&.subart_sml { @include span-columns(2 of 6); }
+
+		// why does nth-last-child not work in chrome... (works in IE)
+		&.nomargin { margin-bottom: 0; } // this is a nasty hack
+	}
+
+	// most links underlined
+	a, a:visited, a:hover, a:active {
+		color: inherit;
+		text-decoration: underline;
+	}
+
+	// inline header links hidden
+	h3 > a { text-decoration: none; }
+
+	p {
+		margin: 0 0 1em 0;
+
+		&.stretch {
+			@include span-columns(6 of 6);
+			@include omega();
+		}
+	}
+
+	// last items do not have margin
+	p:last-child, ul:last-child {
+		margin-bottom: 0;
+	}
+
+	ul {
+		list-style-type: none;
+		padding: 0 0 0 1em;
+		margin: 0 0 1em 0;
+
+		& > li:before { 
+		    content: "\00B7";
+		    position: relative;
+		    left: -0.6em;
+		    top: 0;
+		}
+	}
+
+	ol {
+		padding: 0 0 0 1.8em;
+		margin: 0 0 1.8em 0;
+	}
+}

@@ -1,6 +1,6 @@
 var H1_PADDING_PX = 32,
 	H2_PADDING_PX = 42,
-	SCROLL_DURATION = 200;
+	SCROLL_DURATION = 150;
 
 
 function resize_page(){
@@ -23,11 +23,11 @@ function init_index(){
 	// find unordered-index list
 	var $index_list = $('#index_list')
 
-	// loop through each upper level h1 article and add to index
+	// loop through each h1 and h2 article and add to index
 	$('article h1, article h2').each(function(index){
 
-		var $target = $(this);
-			$item_text = $('<span>').text($target.text());
+		var $target = $(this),
+			$item_text = $('<span>').text($target.text()),
 			$index_item = $('<li>');
 
 		// add spacers between h1s
@@ -45,6 +45,22 @@ function init_index(){
 				'duration': SCROLL_DURATION,
 				'offset': $target.is('h1') ? -H1_PADDING_PX : -H2_PADDING_PX
 			});
+		});
+	});
+
+	// add spacer between normal index and index-pullout links
+	$index_list.append($('<li>', {class: 'spacer'}));
+
+	// add extra index-pullout links
+	$('a.index-pullout').each(function(index){
+
+		var href = $(this).attr('href');
+			$item_text = $('<span>').text($(this).text());
+			$index_item = $('<li>', {class : "index-pullout"});
+
+		$index_list.append($index_item.append($item_text));
+		$index_item.click(function(){
+			window.location = href;
 		});
 	});
 }

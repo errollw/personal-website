@@ -26,6 +26,9 @@ div.page {
   background-color: #e8e8e8;
   font-family: "Anonymous Pro", sans-serif; }
 
+li.spacer {
+  height: 8px; }
+
 h1 {
   font-family: "Roboto Slab", serif;
   font-size: 24px;
@@ -50,9 +53,6 @@ h3 {
 h1, h2, h3 {
   margin-right: 0; }
 
-li.spacer {
-  height: 8px; }
-
 section {
   float: left;
   display: block;
@@ -64,24 +64,75 @@ section {
   section:last-child {
     margin-right: 0; }
 
+aside {
+  float: left;
+  display: block;
+  margin-right: 3.16844%;
+  width: 31.22104%;
+  margin-right: 0;
+  color: #e4141b; }
+  aside:last-child {
+    margin-right: 0; }
+  aside a, aside a:visited, aside a:hover, aside a:active {
+    color: inherit;
+    text-decoration: underline; }
+
+img {
+  width: 100%;
+  height: auto; }
+
+#index_list {
+  list-style-type: none;
+  padding: 0;
+  font-size: 14px; }
+  #index_list span:hover, #index_list span:active {
+    cursor: pointer;
+    background: #fadbdc;
+    position: relative; }
+  #index_list li.subitem, #index_list li.index-pullout {
+    font-size: 13px;
+    padding: 0 0 0 1em; }
+  #index_list li.index-pullout > span:before {
+    content: "";
+    border-color: transparent #e4141b;
+    border-style: solid;
+    border-width: 0.3em 0 0.3em 0.38em;
+    display: block;
+    height: 0;
+    width: 0;
+    left: -0.9em;
+    top: 0.5em;
+    position: relative;
+    margin-bottom: -0.38em; }
+
+nav {
+  position: fixed;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%;
+  max-width: 253px;
+  color: #0090e0;
+  padding: 32px 0 0 32px;
+  font-size: 14px; }
+  nav:last-child {
+    margin-right: 0; }
+  nav ul {
+    list-style-type: none;
+    padding: 0; }
+    nav ul a:hover, nav ul a:active, nav ul a.toggled {
+      background: #d8eefa; }
+
 article {
-  margin: 0 0 32px 0;
+  margin-bottom: 32px;
   float: left;
   display: block;
   margin-right: 3.16844%;
   width: 65.61052%; }
   article:last-child {
     margin-right: 0; }
-  article p.stretch {
-    float: left;
-    display: block;
-    margin-right: 4.82916%;
-    width: 100%;
-    margin-right: 0; }
-    article p.stretch:last-child {
-      margin-right: 0; }
   article article {
-    margin: 0 0 16px 0;
+    margin-bottom: 16px;
     float: left;
     display: block;
     margin-right: 4.82916%;
@@ -106,72 +157,34 @@ article {
       width: 30.11389%; }
       article article.subart_sml:last-child {
         margin-right: 0; }
+    article article.nomargin {
+      margin-bottom: 0; }
   article a, article a:visited, article a:hover, article a:active {
     color: inherit;
     text-decoration: underline; }
+  article h3 > a {
+    text-decoration: none; }
   article p {
     margin: 0 0 1em 0; }
+    article p.stretch {
+      float: left;
+      display: block;
+      margin-right: 4.82916%;
+      width: 100%;
+      margin-right: 0; }
+      article p.stretch:last-child {
+        margin-right: 0; }
   article p:last-child, article ul:last-child {
-    margin: 0; }
+    margin-bottom: 0; }
   article ul {
     list-style-type: none;
     padding: 0 0 0 1em;
     margin: 0 0 1em 0; }
+    article ul > li:before {
+      content: "\00B7";
+      position: relative;
+      left: -0.6em;
+      top: 0; }
   article ol {
     padding: 0 0 0 1.8em;
     margin: 0 0 1.8em 0; }
-  article ul > li:before {
-    content: "\00B7";
-    position: relative;
-    left: -0.6em;
-    top: 0; }
-
-aside {
-  float: left;
-  display: block;
-  margin-right: 3.16844%;
-  width: 31.22104%;
-  margin-right: 0;
-  color: #e4141b; }
-  aside:last-child {
-    margin-right: 0; }
-  aside a, aside a:visited, aside a:hover, aside a:active {
-    color: inherit;
-    text-decoration: underline; }
-
-nav {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 23.23176%;
-  max-width: 253px;
-  position: fixed;
-  color: #0090e0;
-  padding: 32px 0 0 32px;
-  font-size: 14px; }
-  nav:last-child {
-    margin-right: 0; }
-  nav ul {
-    list-style-type: none;
-    padding: 0; }
-    nav ul a, nav ul a:visited {
-      color: inherit;
-      text-decoration: none; }
-    nav ul a:hover, nav ul a:active, nav ul a.toggled {
-      background: #d8eefa; }
-
-.prof-pic {
-  background-image: url("../img/profile_1x1.jpg");
-  background-position: center center;
-  background-size: cover; }
-
-#index_list {
-  list-style-type: none;
-  padding: 0;
-  font-size: 14px; }
-  #index_list span:hover, #index_list span:active {
-    cursor: pointer;
-    background: #fadbdc; }
-  #index_list li.subitem {
-    font-size: 13px;
-    padding: 0 0 0 1em; }

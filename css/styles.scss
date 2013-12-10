@@ -30,6 +30,7 @@ div.page {
   @include outer-container;
 }
 
+// monospace text style (e.g. for code)
 .mono {
 	font-size: 110%;
 	padding: 2px 4px;
@@ -37,40 +38,11 @@ div.page {
 	font-family: $font-mono;
 }
 
-// headers used for main indexable titles
-h1 {
-	font-family: $font-title;
-	font-size: 24px;
-	line-height: 100%;
-	font-weight: 300;
-	margin: 0 0 $padding/2 0;
-	padding-bottom: 0.5em;
-	border-bottom: 1px solid;
-}
-
-// headers used for subsections
-h2 {
-	font-size: 14px;
-	font-weight: 600;
-	margin: 0 0 $padding/2 0;
-	padding-bottom: 0.5em;
-	border-bottom: 1px dotted;
-}
-
-// in-line subsubsection headers
-h3 {
-	font-size: 13px;
-	font-weight: 600;
-	margin: 0 0 1em 0;
-}
-
-h1, h2, h3 {
-	@include omega();
-}
-
 li.spacer {
 	height: $padding/4
 }
+
+@import "headers";
 
 section {
   	@include span-columns(9);
@@ -79,58 +51,6 @@ section {
   	padding: $padding $padding 0 0;
 
   	font-size: 13px;
-  }
-
-article {
-
-	margin: 0 0 $padding 0;
-
-	@include span-columns(6 of 9);
-
-	p.stretch {
-		@include span-columns(6 of 6);
-		@include omega();
-	}
-
-	article {
-		margin: 0 0 $padding/2 0;
-		@include span-columns(3 of 6);
-		@include omega(2n);
-
-		&.subart_big { @include span-columns(4 of 6); }
-		&.subart_sml { @include span-columns(2 of 6); }
-	}
-
-	a, a:visited, a:hover, a:active {
-		color: inherit;
-		text-decoration: underline;
-	}
-
-	p {
-		margin: 0 0 1em 0;
-	}
-
-	p:last-child, ul:last-child {
-		margin:0;
-	}
-
-	ul {
-		list-style-type: none;
-		padding: 0 0 0 1em;
-		margin: 0 0 1em 0;
-	}
-
-	ol {
-		padding: 0 0 0 1.8em;
-		margin: 0 0 1.8em 0;
-	}
-
-	ul > li:before { 
-	    content: "\00B7";
-	    position: relative;
-	    left: -0.6em;
-	    top: 0;
-	}
 }
 
 aside {
@@ -145,33 +65,9 @@ aside {
 	}
 }
 
-nav {
-	@include span-columns(3);	// fixed position navbar
-	max-width: 253px;			// hack to stop it getting too large
-	position: fixed;
-
-	color: $blue;
-	padding: $padding 0 0 $padding ;
-	font-size: 14px;
-	
-	ul {
-		list-style-type: none;
-		padding: 0;
-
-		a, a:visited {
-			color: inherit;
-			text-decoration: none;
-		}
-		a:hover, a:active, a.toggled {
-			background: tint($blue, 85%);
-		}
-	}
-}
-
-.prof-pic {
-	background-image: url("../img/profile_1x1.jpg");
-	background-position: center center;
-	background-size: cover;
+img {
+	width: 100%;
+	height: auto;
 }
 
 #index_list {
@@ -182,10 +78,28 @@ nav {
 	span:hover, span:active {
 		cursor: pointer;
 		background: tint($red, 85%);
+		position: relative;
 	}
 
-	li.subitem {
+	li.subitem, li.index-pullout {
 		font-size: 13px;
 		padding: 0 0 0 1em;
 	}
+
+	li.index-pullout>span:before {
+	    content: "";
+	    border-color: transparent $red;
+	    border-style: solid;
+	    border-width: 0.3em 0 0.3em 0.38em;
+	    display: block;
+	    height: 0;
+	    width: 0;
+	    left: -0.9em;
+	    top: 0.5em;
+	    position: relative;
+	    margin-bottom: -0.38em;
+	}
 }
+
+@import "nav";
+@import "article";
