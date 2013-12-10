@@ -10,10 +10,11 @@ function resize_page(){
 		$(this).height($(this).width());
 	});
 
-	// add margin so user can scroll to last articles
+	// add margin so last article reaches top of page
 	var view_h = $(window).height(),
 		$last_art = $('section>article:last-child, section>aside:last-child');
-	$last_art.css('margin-bottom', view_h-$last_art.height());
+		extra_pad = $last_art.is('h1') ? H1_PADDING_PX : H2_PADDING_PX
+	$last_art.css('margin-bottom', view_h-$last_art.height() - extra_pad);
 }
 
 
