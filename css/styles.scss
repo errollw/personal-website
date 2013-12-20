@@ -103,3 +103,8 @@ img {
 
 @import "nav";
 @import "article";
+
+canvas {
+	width: 100%;
+	border: 1px solid $grey;
+}

@@ -188,3 +188,7 @@ article {
   article ol {
     padding: 0 0 0 1.8em;
     margin: 0 0 1.8em 0; }
+
+canvas {
+  width: 100%;
+  border: 1px solid #e8e8e8; }
