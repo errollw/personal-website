@@ -56,7 +56,7 @@ function onMouseUp() {
 
 function onMouseMove(event) {
 
-	if (!dragging) return;
+	if (!dragging) return false;
 
 	// Constrain the point to drag to
 	var point = event.point.clone();
@@ -67,10 +67,12 @@ function onMouseMove(event) {
 
 	// moved currently dragged point
 	switch (dragged_cp){
-		case 'P0' : curve.point1  = point;                break;
+		case 'P0' : curve.handle1 += (curve.point1-point);
+					curve.point1  = point;                break;
 		case 'P1' : curve.handle1 = point - curve.point1; break;
 		case 'P2' : curve.handle2 = point - curve.point2; break;
-		case 'P3' : curve.point2  = point;                break;
+		case 'P3' : curve.handle2 += (curve.point2-point);
+					curve.point2  = point;                break;
 	}
 
 	update_cps();
