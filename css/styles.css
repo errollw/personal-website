@@ -89,6 +89,8 @@ img {
     cursor: pointer;
     background: #fadbdc;
     position: relative; }
+  #index_list span:first-letter {
+    text-transform: uppercase; }
   #index_list li.subitem, #index_list li.index-pullout {
     font-size: 13px;
     padding: 0 0 0 1em; }
@@ -187,7 +189,7 @@ article {
       top: 0; }
   article ol {
     padding: 0 0 0 1.8em;
-    margin: 0 0 1.8em 0; }
+    margin: 0 0 1em 0; }
 
 canvas {
   width: 100%;
