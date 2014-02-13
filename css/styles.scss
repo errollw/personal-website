@@ -38,6 +38,10 @@ div.page {
 	font-family: $font-mono;
 }
 
+.hidden {
+	display: none;
+}
+
 li.spacer {
 	height: $padding/4
 }

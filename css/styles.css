@@ -26,6 +26,9 @@ div.page {
   background-color: #e8e8e8;
   font-family: "Anonymous Pro", sans-serif; }
 
+.hidden {
+  display: none; }
+
 li.spacer {
   height: 8px; }
 
@@ -89,8 +92,6 @@ img {
     cursor: pointer;
     background: #fadbdc;
     position: relative; }
-  #index_list span:first-letter {
-    text-transform: uppercase; }
   #index_list li.subitem, #index_list li.index-pullout {
     font-size: 13px;
     padding: 0 0 0 1em; }
