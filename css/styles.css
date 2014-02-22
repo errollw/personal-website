@@ -88,14 +88,16 @@ img {
   list-style-type: none;
   padding: 0;
   font-size: 14px; }
-  #index_list span:hover, #index_list span:active {
-    cursor: pointer;
-    background: #fadbdc;
-    position: relative; }
+  #index_list span {
+    cursor: pointer; }
+  #index_list a {
+    text-decoration: none; }
+    #index_list a:hover, #index_list a:active {
+      text-decoration: underline; }
   #index_list li.subitem, #index_list li.index-pullout {
     font-size: 13px;
     padding: 0 0 0 1em; }
-  #index_list li.index-pullout > span:before {
+  #index_list li.index-pullout > a:before {
     content: "";
     border-color: transparent #e4141b;
     border-style: solid;

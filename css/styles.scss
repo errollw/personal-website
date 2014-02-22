@@ -79,10 +79,13 @@ img {
 	padding: 0;
 	font-size: 14px;
 
-	span:hover, span:active {
+	span {
 		cursor: pointer;
-		background: tint($red, 85%);
-		position: relative;
+	}
+
+	a {
+		text-decoration: none;
+		&:hover, &:active { text-decoration: underline; }
 	}
 
 	li.subitem, li.index-pullout {
@@ -90,7 +93,7 @@ img {
 		padding: 0 0 0 1em;
 	}
 
-	li.index-pullout>span:before {
+	li.index-pullout>a:before {
 	    content: "";
 	    border-color: transparent $red;
 	    border-style: solid;
@@ -103,6 +106,8 @@ img {
 	    position: relative;
 	    margin-bottom: -0.38em;
 	}
+
+
 }
 
 @import "nav";

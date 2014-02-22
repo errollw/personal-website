@@ -13,7 +13,7 @@ function resize_page(){
 	// add margin so last article reaches top of page
 	var view_h = $(window).height(),
 		$last_art = $('section>article:last-child, section>aside:last-child');
-		extra_pad = $last_art.is('h1') ? H1_PADDING_PX : H2_PADDING_PX
+		extra_pad = $last_art.is('h1') ? H1_PADDING_PX : H2_PADDING_PX;
 	$last_art.css('margin-bottom', view_h-$last_art.height() - extra_pad);
 }
 
@@ -55,13 +55,10 @@ function init_index(){
 	$('a.index-pullout').each(function(index){
 
 		var href = $(this).attr('href');
-			$item_text = $('<span>').text($(this).text());
+			$item_text = $('<a href='+href+'>').text($(this).text());
 			$index_item = $('<li>', {class : "index-pullout"});
 
 		$index_list.append($index_item.append($item_text));
-		$index_item.click(function(){
-			window.location = href;
-		});
 	});
 }
 
