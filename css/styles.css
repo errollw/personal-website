@@ -66,6 +66,15 @@ section {
   font-size: 13px; }
   section:last-child {
     margin-right: 0; }
+  section section {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+    margin-left: 0%;
+    padding: 0; }
+    section section:last-child {
+      margin-right: 0; }
 
 aside {
   float: left;
