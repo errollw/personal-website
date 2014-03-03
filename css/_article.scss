@@ -6,6 +6,11 @@ article {
 
 	@include span-columns(6 of 9);
 
+	canvas {
+	width: 100%;
+		border: 1px dotted black;
+	}
+
 	article {
 		margin-bottom: $padding/2;
 		@include span-columns(3 of 6);
