@@ -1,55 +1,51 @@
-var H1_PADDING_PX = 32,
-	H2_PADDING_PX = 42,
-	SCROLL_DURATION = 150;
 
+// add margin so last article reaches top of page
+function pad_last_item(){
 
-function resize_page(){
+	var view_h = $(window).height();
+	// var $last_h1 = $('section>h1:last-of-type');
+	// var $last_h2 = $('section>h2:last-of-type');
+ 
+	// var bottom_of_lowest_header = Math.max($last_h1.offset().y, $last_h2.offset().y);
 
-	// adjust height so '.square' items are so
-	$('.square').each(function(i){
-		$(this).height($(this).width());
-	});
-
-	// add margin so last article reaches top of page
-	var view_h = $(window).height(),
-		$last_art = $('section>article:last-child, section>aside:last-child');
-		extra_pad = $last_art.is('h1') ? H1_PADDING_PX : H2_PADDING_PX;
-	$last_art.css('margin-bottom', view_h-$last_art.height() - extra_pad);
+	$('section:last-child').css('margin-bottom', view_h);
 }
-
 
 function init_index(){
 
-	// find unordered-index list
-	var $index_list = $('#index_list')
-
 	// loop through each h1 and h2 article and add to index
-	$('article h1, article h2').each(function(index){
+	$('section>h1, section>h2').each(function(index){
+
+		console.log($(this))
 
 		var $target = $(this),
 			$item_text = $('<span>').text($target.text()),
-			$index_item = $('<li>');
+			$index_item = $('<a>').text($target.text());
 
-		// add spacers between h1s
-		if ($target.is('h1') && index > 0)
-			$index_list.append($('<li>', {class: 'spacer'}));
+		$index_item.attr('href','#testid')
 
-		// make h2s a bit smaller
-		if ($target.is('h2'))
-			$index_item.addClass('subitem');
+		// 	// add spacers between h1s
+		// 	if ($target.is('h1') && index > 0)
+		// 		$index_list.append($('<li>', {class: 'spacer'}));
 
-		$index_list.append($index_item.append($item_text));
+		// 	// make h2s a bit smaller
+		// 	if ($target.is('h2'))
+		// 		$index_item.addClass('subitem');
 
-		$index_item.click(function(){
-			$.scrollTo($target, {
-				'duration': SCROLL_DURATION,
-				'offset': $target.is('h1') ? -H1_PADDING_PX : -H2_PADDING_PX
-			});
-		});
+		$('#index-list').append($index_item);
+
+		// 	$index_item.click(function(){
+		// 		$.scrollTo($target, {
+		// 			'duration': SCROLL_DURATION,
+		// 			'offset': $target.is('h1') ? -H1_PADDING_PX : -H2_PADDING_PX
+		// 		});
+		// 	});
+		// });
+
+		// // add spacer between normal index and index-pullout links
+		// $index_list.append($('<li>', {class: 'spacer'}));
+
 	});
-
-	// add spacer between normal index and index-pullout links
-	$index_list.append($('<li>', {class: 'spacer'}));
 
 	// add extra index-pullout links
 	$('a.index-pullout').each(function(index){
@@ -60,6 +56,8 @@ function init_index(){
 
 		$index_list.append($index_item.append($item_text));
 	});
+
+	
 }
 
 
@@ -78,9 +76,17 @@ function init_nav(){
 		});
 	}
 
-	$('nav').load('/nav.html', callback);	
+	$('#nav-list').load('nav.html')
+
+	
 }
 
+function resize_page(){
+	pad_last_item();
+
+	$('#index-list').css('left', $('section').offset().left + $('section').outerWidth());
+	$('#nav-list').css('left', $('section').offset().left - $('#nav-list').width());
+}
 
 //Runs once page is loaded
 $(function () {
@@ -88,6 +94,6 @@ $(function () {
 	init_nav();
 	init_index();
 
-	$(window).resize(resize_page);
-	resize_page()
+	$(window).resize(_.debounce(resize_page, 50));
+	resize_page();
 });

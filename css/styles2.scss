@@ -1,0 +1,124 @@
+// $visual-grid: true;
+
+@import "bourbon/bourbon";
+@import "grid-settings";
+@import "neat/neat";
+
+@font-face {
+  font-family: 'Open Sans';
+  font-weight: 600;
+  src: url('fonts/OpenSans-Bold.ttf');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-weight: 400;
+  src: url('fonts/OpenSans-Regular.ttf');
+}
+
+$font-text: 'Open Sans', sans-serif;
+
+$blue: #0090e0;
+$red:  #e4141b;
+$grey: darken(whitesmoke, 5%);
+
+$padding: 32px;
+
+// general settings
+body {
+	font-family: $font-text;
+
+	// disable link styles in general
+	a, a:visited, a:hover, a:active {
+		color: #3f51b5;
+		text-decoration: underline;
+	}
+}
+
+// outer container for page
+section {
+	@include outer-container;
+	padding: 0 1rem;
+}
+
+#nav-list, #index-list {
+	position: fixed;
+	width: 15rem;
+}
+
+#nav-list {
+
+	font-size: 1rem;
+
+	ul {
+		list-style-type: none; // remove bullet points
+		padding: 0;
+
+		a {
+			color: black;
+			text-decoration: none;
+		}
+		a:hover, a:active, a.toggled {
+			text-decoration: underline;
+		}
+	}
+
+	.spacer {
+		height: 0.8rem;
+	}
+}
+
+#index-list {
+	a {
+		display: block;
+	}
+}
+
+h1 {
+	@include span-columns(10);
+
+	font-weight: 400;
+	font-size: 1.7rem;
+	line-height: 1.7rem;
+
+	margin-top: 0;
+	margin-bottom: 1.4rem;
+	padding-top: 2.2rem;
+	padding-bottom: 1.4rem;
+	border-bottom: 1px solid #CCC;
+}
+
+h2 {
+	@include span-columns(10);
+
+	font-weight: 400;
+	font-size: 1.3rem;
+	line-height: 1.3rem;
+
+	line-height: 100%;
+	margin-top: 0;
+	margin-bottom: 1rem;
+	padding-top: 2.2rem;
+	padding-bottom: 1rem;
+	border-bottom: 1px solid #CCC;
+}
+
+article {
+	@include span-columns(10);
+}
+
+aside {
+	@include span-columns(7);
+	@include omega;
+}
+
+img {
+	@include span-columns(3);
+}
+
+p:first-child {
+	margin-top: 0;
+}
+
+p {
+	font-size: 0.92rem;
+}
