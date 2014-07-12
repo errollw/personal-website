@@ -22,7 +22,7 @@ section {
   max-width: 50em;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 1rem; }
+  padding: 0 1.4rem; }
   section:before, section:after {
     content: " ";
     display: table; }
@@ -31,23 +31,22 @@ section {
 
 #nav-list, #index-list {
   position: fixed;
-  width: 15rem; }
-
-#nav-list {
+  width: 15rem;
   font-size: 1rem; }
-  #nav-list ul {
-    list-style-type: none;
-    padding: 0; }
-    #nav-list ul a {
-      color: black;
-      text-decoration: none; }
-    #nav-list ul a:hover, #nav-list ul a:active, #nav-list ul a.toggled {
-      text-decoration: underline; }
-  #nav-list .spacer {
+  #nav-list a, #nav-list span, #index-list a, #index-list span {
+    display: block;
+    color: black;
+    text-decoration: none; }
+  #nav-list a:hover, #nav-list a:active, #nav-list a.toggled, #index-list a:hover, #index-list a:active, #index-list a.toggled {
+    text-decoration: underline; }
+  #nav-list .spacer, #index-list .spacer {
     height: 0.8rem; }
 
-#index-list a {
-  display: block; }
+#index-list a.p-out {
+  color: #3f51b5;
+  text-decoration: underline;
+  font-size: 0.92rem;
+  line-height: 1.35rem; }
 
 h1 {
   float: left;
@@ -55,13 +54,13 @@ h1 {
   margin-right: 2.84259%;
   width: 100%;
   font-weight: 400;
-  font-size: 1.7rem;
-  line-height: 1.7rem;
+  font-size: 1.6rem;
+  line-height: 100%;
   margin-top: 0;
-  margin-bottom: 1.4rem;
+  margin-bottom: 1.2rem;
   padding-top: 2.2rem;
-  padding-bottom: 1.4rem;
-  border-bottom: 1px solid #CCC; }
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #DDD; }
   h1:last-child {
     margin-right: 0; }
 
@@ -71,14 +70,14 @@ h2 {
   margin-right: 2.84259%;
   width: 100%;
   font-weight: 400;
-  font-size: 1.3rem;
-  line-height: 1.3rem;
+  font-size: 1.2rem;
+  line-height: 100%;
   line-height: 100%;
   margin-top: 0;
   margin-bottom: 1rem;
   padding-top: 2.2rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid #CCC; }
+  border-bottom: 1px solid #DDD; }
   h2:last-child {
     margin-right: 0; }
 
@@ -111,4 +110,5 @@ p:first-child {
   margin-top: 0; }
 
 p {
-  font-size: 0.92rem; }
+  font-size: 0.92rem;
+  line-height: 1.35rem; }

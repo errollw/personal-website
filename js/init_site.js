@@ -32,7 +32,7 @@ function init_index(){
 		// 	if ($target.is('h2'))
 		// 		$index_item.addClass('subitem');
 
-		$('#index-list').append($index_item);
+		$('#index-list>h1').after($index_item);
 
 		// 	$index_item.click(function(){
 		// 		$.scrollTo($target, {
@@ -48,13 +48,13 @@ function init_index(){
 	});
 
 	// add extra index-pullout links
-	$('a.index-pullout').each(function(index){
+	$('section a.p-out').each(function(index){
 
 		var href = $(this).attr('href');
-			$item_text = $('<a href='+href+'>').text($(this).text());
-			$index_item = $('<li>', {class : "index-pullout"});
+		var $pullout_link = $('<a href='+href+'>').text($(this).text());
+		$pullout_link.addClass('p-out');
 
-		$index_list.append($index_item.append($item_text));
+		$('#index-list>h2').after($pullout_link);
 	});
 
 	
@@ -93,6 +93,10 @@ $(function () {
 
 	init_nav();
 	init_index();
+
+	// if (window.location.hash) {
+	//     window.scrollTo(20, 0);
+	// }
 
 	$(window).resize(_.debounce(resize_page, 50));
 	resize_page();

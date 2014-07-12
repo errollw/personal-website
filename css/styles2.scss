@@ -37,29 +37,22 @@ body {
 // outer container for page
 section {
 	@include outer-container;
-	padding: 0 1rem;
+	padding: 0 1.4rem;
 }
 
 #nav-list, #index-list {
 	position: fixed;
 	width: 15rem;
-}
-
-#nav-list {
 
 	font-size: 1rem;
 
-	ul {
-		list-style-type: none; // remove bullet points
-		padding: 0;
-
-		a {
-			color: black;
-			text-decoration: none;
-		}
-		a:hover, a:active, a.toggled {
-			text-decoration: underline;
-		}
+	a, span {
+		display: block;
+		color: black;
+		text-decoration: none;
+	}
+	a:hover, a:active, a.toggled {
+		text-decoration: underline;
 	}
 
 	.spacer {
@@ -68,8 +61,13 @@ section {
 }
 
 #index-list {
-	a {
-		display: block;
+
+	a.p-out {
+		color: #3f51b5;
+		text-decoration: underline;
+
+		font-size: 0.92rem;
+		line-height: 1.35rem;
 	}
 }
 
@@ -77,29 +75,28 @@ h1 {
 	@include span-columns(10);
 
 	font-weight: 400;
-	font-size: 1.7rem;
-	line-height: 1.7rem;
+	font-size: 1.6rem;
+	line-height: 100%;
 
 	margin-top: 0;
-	margin-bottom: 1.4rem;
+	margin-bottom: 1.2rem;
 	padding-top: 2.2rem;
-	padding-bottom: 1.4rem;
-	border-bottom: 1px solid #CCC;
+	padding-bottom: 1rem;
+	border-bottom: 1px solid #DDD;
 }
 
 h2 {
 	@include span-columns(10);
 
 	font-weight: 400;
-	font-size: 1.3rem;
-	line-height: 1.3rem;
-
+	font-size: 1.2rem;
 	line-height: 100%;
+
 	margin-top: 0;
 	margin-bottom: 1rem;
 	padding-top: 2.2rem;
 	padding-bottom: 1rem;
-	border-bottom: 1px solid #CCC;
+	border-bottom: 1px solid #DDD;
 }
 
 article {
@@ -121,4 +118,5 @@ p:first-child {
 
 p {
 	font-size: 0.92rem;
+	line-height: 1.35rem;
 }
