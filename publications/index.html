@@ -3,18 +3,16 @@
   <head>
     <meta charset="utf-8">
 
-    <!-- fetch fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600|Roboto+Slab:400,300,700|Anonymous+Pro:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-
-    <title>Erroll Wood</title>
+    <title>Erroll Wood &ndash; Research</title>
 
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
     <!-- stylesheets -->
     <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/styles2.css">
 
     <!-- javascript -->
+    <script type='text/javascript' src='/js/lodash.js'></script>
     <script type='text/javascript' src='/js/jquery-2.0.3.js'></script>
     <script type='text/javascript' src='/js/jquery.scrollTo-1.4.3.1-min.js'></script>
     <script type='text/javascript' src='/js/init_site.js'></script>
@@ -23,47 +21,31 @@
 
   <body>
 
-    <div class='page'>
-
-      <!-- nav contents loaded here -->
-      <nav>
-        <h1>Erroll Wood</h1>
-      </nav>
-
-      <section>
-
-        <article>
-          <h1>Publications</h1>
-
-          <p>Under construction</p> <!-- empty child to fix for omega(2n) -->
-        </article>
-
-        <aside>
-          <h1> Index </h1>
-          <ul id = 'index_list'></ul>
+    <section>
+    <h1>EyeTab: Model-based gaze estimation on unmodified tablet computers</h1>
+    </section>
+    
+    <section>
+        <aside class='half'>
+            <p>Erroll Wood <br> University of Cambridge</p>
         </aside>
 
-        <article>
-          <h1>EyeTab: Model-based gaze estimation on unmodified tablet computers</h1>
+        <aside class='half'>
+            <p>Andreas Bulling <br> <i>Max Planck Institute for Informatics</i></p>
+        </aside>
+    </section>
 
-          <p></p> <!-- empty child to fix for omega(2n) -->  
-          <article>
-            <h3> Erroll Wood </h3>
-            <p> University of Cambridge, United Kingdom </p>
-          </article>
-  
-          <article>
-            <h3> Andreas Bulling </h3>
-            <p> Max Planck Institute for Informatics </p>
-          </article>
-        
+    <section>
+        <aside class='half'>
+            <img src="eyetab_use.jpg">
+        </aside>
+    </section>
 
-        </article>
+    <section>
+        <h3>Abstract</h3>
+        Despite the widespread use of mobile phones and tablets, hand-held portable devices have only recently been identified as a promising platform for gaze-aware applications. Estimating gaze on portable devices is challenging given their limited computational resources, low quality integrated front-facing RGB cameras, and small screens to which gaze is mapped. In this paper we present <i>EyeTab</i>, a model-based approach for binocular gaze estimation that runs entirely on an unmodified tablet. EyeTab builds on a set of established imageprocessing and computer vision algorithms, and adapts them for robust and near-realtime gaze estimation. A technical prototype evaluation with eight participants in a normal indoors office setting shows that EyeTab achieves an average gaze estimation accuracy of 6.88 degrees of visual angle at 12 frames per second.
+    </section>
 
-      </section>
-    
-    </div>
-
-  </body>
+    </body>
 
 </html>

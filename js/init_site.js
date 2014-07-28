@@ -13,39 +13,28 @@ function pad_last_item(){
 
 function init_index(){
 
-	// loop through each h1 and h2 article and add to index
+	$('body').prepend($('<nav/>').attr('id','index-list'));
+
+	$('#index-list').append($('<h1/>').text('This page'));
+	$('#index-list').append($('<div/>').attr('id','list-this-page'));
+
+	// add each h1 and h2 in sections to 'this page'
 	$('section>h1, section>h2').each(function(index){
 
-		console.log($(this))
+		var target_id = $(this).text().replace(/ +/g,'_').toLowerCase()
+		$(this).attr('id',target_id);
 
 		var $target = $(this),
-			$item_text = $('<span>').text($target.text()),
 			$index_item = $('<a>').text($target.text());
 
-		$index_item.attr('href','#testid')
+		$index_item.attr('href','#'+target_id)
+		$index_item.addClass(this.localName)
 
-		// 	// add spacers between h1s
-		// 	if ($target.is('h1') && index > 0)
-		// 		$index_list.append($('<li>', {class: 'spacer'}));
-
-		// 	// make h2s a bit smaller
-		// 	if ($target.is('h2'))
-		// 		$index_item.addClass('subitem');
-
-		$('#index-list>h1').after($index_item);
-
-		// 	$index_item.click(function(){
-		// 		$.scrollTo($target, {
-		// 			'duration': SCROLL_DURATION,
-		// 			'offset': $target.is('h1') ? -H1_PADDING_PX : -H2_PADDING_PX
-		// 		});
-		// 	});
-		// });
-
-		// // add spacer between normal index and index-pullout links
-		// $index_list.append($('<li>', {class: 'spacer'}));
-
+		$('#list-this-page').append($index_item);
 	});
+
+	$('#index-list').append($('<h2/>').text('Links'));
+	$('#index-list').append($('<div/>').attr('id','list-links'));
 
 	// add extra index-pullout links
 	$('section a.p-out').each(function(index){
@@ -54,7 +43,12 @@ function init_index(){
 		var $pullout_link = $('<a href='+href+'>').text($(this).text());
 		$pullout_link.addClass('p-out');
 
-		$('#index-list>h2').after($pullout_link);
+		console.log($(this).data())
+		if ($(this).data('pOutName')){
+			$pullout_link.text($(this).data('pOutName'))
+		}
+
+		$('#list-links').append($pullout_link);
 	});
 
 	
@@ -63,21 +57,22 @@ function init_index(){
 
 function init_nav(){
 
-	// callback function to highlight visited page
-	function callback(){
+	$('body').prepend($('<nav/>').attr('id','nav-list'));
 
-		// loop though all nav links, add '.toggled' if url includes href
-		$('nav a').each(function(){
-			var href = $(this).attr('href');
-			href = href.replace(/[\\]/g,"");	// strip punctuation
-			console.log(href)
-			if (document.URL.indexOf(href) !== -1)
-				$(this).addClass('toggled')
-		});
-	}
+	// // callback function to highlight visited page
+	// function callback(){
 
-	$('#nav-list').load('nav.html')
+	// 	// loop though all nav links, add '.toggled' if url includes href
+	// 	$('nav a').each(function(){
+	// 		var href = $(this).attr('href');
+	// 		href = href.replace(/[\\]/g,"");	// strip punctuation
+	// 		console.log(href)
+	// 		if (document.URL.indexOf(href) !== -1)
+	// 			$(this).addClass('toggled')
+	// 	});
+	// }
 
+	$('#nav-list').load('/nav.html')
 	
 }
 

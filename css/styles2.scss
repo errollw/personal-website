@@ -9,11 +9,26 @@
   font-weight: 600;
   src: url('fonts/OpenSans-Bold.ttf');
 }
+
+@font-face {
+  font-family: 'Open Sans';
+  font-weight: 500;
+  src: url('fonts/OpenSans-SemiBold.ttf');
+}
+
 @font-face {
   font-family: 'Open Sans';
   font-weight: 400;
   src: url('fonts/OpenSans-Regular.ttf');
 }
+
+@font-face {
+  font-family: 'Open Sans';
+  font-weight: 400;
+  font-style: italic;
+  src: url('fonts/OpenSans-Italic.ttf');
+}
+
 
 $font-text: 'Open Sans', sans-serif;
 
@@ -69,24 +84,43 @@ section {
 		font-size: 0.92rem;
 		line-height: 1.35rem;
 	}
+
+	// make this-page links one line and clamped
+	.h1, .h2 {
+		width:100%;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	.h1 {
+		margin-top: 1rem;
+	}
+
+	.h2 {
+		font-size: 0.92rem;
+		padding: 0 0 0 1em;
+	}
 }
 
 h1 {
-	@include span-columns(10);
+	@include span-columns(12);
 
 	font-weight: 400;
 	font-size: 1.6rem;
-	line-height: 100%;
+	// line-height: 100%;
+
+	// line-spacing: 1.2em;
 
 	margin-top: 0;
-	margin-bottom: 1.2rem;
-	padding-top: 2.2rem;
+	margin-bottom: 1.1rem;
+	padding-top: 2.1rem;
 	padding-bottom: 1rem;
 	border-bottom: 1px solid #DDD;
 }
 
 h2 {
-	@include span-columns(10);
+	@include span-columns(12);
 
 	font-weight: 400;
 	font-size: 1.2rem;
@@ -99,24 +133,72 @@ h2 {
 	border-bottom: 1px solid #DDD;
 }
 
+h3 {
+	font-weight: 400;
+	font-size: 1.1rem;
+	margin-bottom: 1rem;
+}
+
 article {
-	@include span-columns(10);
+	@include span-columns(12);
 }
 
-aside {
-	@include span-columns(7);
-	@include omega;
+article.danger {
+	background-color:#fde0dc;
+	color:#b0120a;
+	padding: 1rem;
+	margin-bottom: 1rem;
+	p {
+		margin: 0;
+	}
 }
 
-img {
-	@include span-columns(3);
+aside.two-thirds {
+	@include span-columns(8);
+	@include omega();
 }
+
+aside.half {
+	@include span-columns(6);
+	@include omega(2n);
+}
+
+aside.third, img.third {
+	@include span-columns(4);
+	// @include omega(2n);
+}
+
+aside.omega {
+	@include omega();
+}
+
+// img {
+// 	width:100%;
+// }
 
 p:first-child {
 	margin-top: 0;
 }
 
-p {
+p, li {
 	font-size: 0.92rem;
 	line-height: 1.35rem;
+}
+
+ul {
+	list-style-type: none;
+	padding: 0 0 0 1em;
+	margin: 0 0 1em 0;
+
+	& > li:before { 
+	    content: "\00B7";
+	    position: relative;
+	    left: -0.6em;
+	    top: 0;
+	}
+}
+
+ol {
+	padding: 0 0 0 1.8em;
+	margin: 0 0 1em 0;
 }
