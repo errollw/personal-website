@@ -103,6 +103,12 @@ h3 {
   font-size: 1.1rem;
   margin-bottom: 1rem; }
 
+h4 {
+  font-weight: 400;
+  font-size: 1rem;
+  margin-top: 0em;
+  margin-bottom: 0.5rem; }
+
 article {
   float: left;
   display: block;
@@ -128,16 +134,32 @@ aside.two-thirds {
   aside.two-thirds:last-child {
     margin-right: 0; }
 
-aside.half {
+aside.five-sixths, img.five-sixths {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 82.94039%; }
+  aside.five-sixths:last-child, img.five-sixths:last-child {
+    margin-right: 0; }
+
+aside.three-quarter, img.three-quarter {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 74.41059%; }
+  aside.three-quarter:last-child, img.three-quarter:last-child {
+    margin-right: 0; }
+
+aside.half, img.half {
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 48.82117%; }
-  aside.half:last-child {
+  aside.half:last-child, img.half:last-child {
     margin-right: 0; }
-  aside.half:nth-child(2n) {
+  aside.half:nth-child(2n), img.half:nth-child(2n) {
     margin-right: 0; }
-  aside.half:nth-child(2n+1) {
+  aside.half:nth-child(2n+1), img.half:nth-child(2n+1) {
     clear: left; }
 
 aside.third, img.third {
@@ -146,6 +168,22 @@ aside.third, img.third {
   margin-right: 2.35765%;
   width: 31.76157%; }
   aside.third:last-child, img.third:last-child {
+    margin-right: 0; }
+
+aside.quarter, img.quarter {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%; }
+  aside.quarter:last-child, img.quarter:last-child {
+    margin-right: 0; }
+
+aside.sixth, img.sixth {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 14.70196%; }
+  aside.sixth:last-child, img.sixth:last-child {
     margin-right: 0; }
 
 aside.omega {

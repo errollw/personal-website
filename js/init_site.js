@@ -22,6 +22,7 @@ function init_index(){
 	$('section>h1, section>h2').each(function(index){
 
 		var target_id = $(this).text().replace(/ +/g,'_').toLowerCase()
+		target_id = encodeURIComponent(target_id.trim())
 		$(this).attr('id',target_id);
 
 		var $target = $(this),
@@ -59,19 +60,6 @@ function init_nav(){
 
 	$('body').prepend($('<nav/>').attr('id','nav-list'));
 
-	// // callback function to highlight visited page
-	// function callback(){
-
-	// 	// loop though all nav links, add '.toggled' if url includes href
-	// 	$('nav a').each(function(){
-	// 		var href = $(this).attr('href');
-	// 		href = href.replace(/[\\]/g,"");	// strip punctuation
-	// 		console.log(href)
-	// 		if (document.URL.indexOf(href) !== -1)
-	// 			$(this).addClass('toggled')
-	// 	});
-	// }
-
 	$('#nav-list').load('/nav.html')
 	
 }
@@ -83,15 +71,35 @@ function resize_page(){
 	$('#nav-list').css('left', $('section').offset().left - $('#nav-list').width());
 }
 
+// we want the underlines for headers to line up at the top of the screen
+// so we don't want to scroll all the way to the top of the h2
+function header_offset(target_id) {
+	return ($(target_id).is('h2')) ? -32 : 0;
+}
+
 //Runs once page is loaded
 $(function () {
 
 	init_nav();
 	init_index();
 
-	// if (window.location.hash) {
-	//     window.scrollTo(20, 0);
-	// }
+	if (window.location.hash) {
+		var id = window.location.hash;
+		$('html, body').stop().animate({
+	        'scrollTop': $(id).offset().top - ($(id).is('h2') ? 15 : 0)
+	    }, 500, 'swing');
+	}
+
+	$('a[href^="#"]').on('click',function (e) {
+	    e.preventDefault();
+
+	    var id = this.hash;
+	    $('html, body').stop().animate({
+	        'scrollTop': $(id).offset().top - ($(id).is('h2') ? 15 : 0)
+	    }, 200, 'swing', function () {
+	        window.location.hash = id;
+	    });
+	});
 
 	$(window).resize(_.debounce(resize_page, 50));
 	resize_page();

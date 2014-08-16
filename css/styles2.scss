@@ -139,6 +139,13 @@ h3 {
 	margin-bottom: 1rem;
 }
 
+h4 {
+	font-weight: 400;
+	font-size: 1rem;
+	margin-top: 0em;
+	margin-bottom: 0.5rem;
+}
+
 article {
 	@include span-columns(12);
 }
@@ -158,14 +165,29 @@ aside.two-thirds {
 	@include omega();
 }
 
-aside.half {
+aside.five-sixths, img.five-sixths {
+	@include span-columns(10);
+}
+
+aside.three-quarter, img.three-quarter {
+	@include span-columns(9);
+}
+
+aside.half, img.half {
 	@include span-columns(6);
 	@include omega(2n);
 }
 
 aside.third, img.third {
 	@include span-columns(4);
-	// @include omega(2n);
+}
+
+aside.quarter, img.quarter {
+	@include span-columns(3);
+}
+
+aside.sixth, img.sixth {
+	@include span-columns(2);
 }
 
 aside.omega {
