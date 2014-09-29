@@ -51,6 +51,22 @@ section {
   #nav-list .spacer, #index-list .spacer {
     height: 0.8rem; }
 
+@media screen and (max-width: 480px) {
+  #nav-list {
+    position: static;
+    width: 100%;
+    padding: 1.4rem;
+    background-color: #5677fc;
+    color: white; }
+    #nav-list h1 {
+      display: block;
+      border-bottom: none;
+      padding: 0;
+      margin: 0;
+      height: 100%; }
+    #nav-list a, #nav-list span {
+      display: none; } }
+
 #index-list a.p-out {
   color: #3f51b5;
   text-decoration: underline;
@@ -81,6 +97,14 @@ h1 {
   border-bottom: 1px solid #DDD; }
   h1:last-child {
     margin-right: 0; }
+  @media screen and (max-width: 480px) {
+    h1 {
+      float: left;
+      display: block;
+      margin-right: 7.42297%;
+      width: 100%; }
+      h1:last-child {
+        margin-right: 0; } }
 
 h2 {
   float: left;
@@ -97,6 +121,14 @@ h2 {
   border-bottom: 1px solid #DDD; }
   h2:last-child {
     margin-right: 0; }
+  @media screen and (max-width: 480px) {
+    h2 {
+      float: left;
+      display: block;
+      margin-right: 7.42297%;
+      width: 100%; }
+      h2:last-child {
+        margin-right: 0; } }
 
 h3 {
   font-weight: 400;
@@ -116,6 +148,14 @@ article {
   width: 100%; }
   article:last-child {
     margin-right: 0; }
+  @media screen and (max-width: 480px) {
+    article {
+      float: left;
+      display: block;
+      margin-right: 7.42297%;
+      width: 100%; }
+      article:last-child {
+        margin-right: 0; } }
 
 article.danger {
   background-color: #fde0dc;
@@ -133,6 +173,14 @@ aside.two-thirds {
   margin-right: 0; }
   aside.two-thirds:last-child {
     margin-right: 0; }
+  @media screen and (max-width: 480px) {
+    aside.two-thirds {
+      float: left;
+      display: block;
+      margin-right: 7.42297%;
+      width: 100%; }
+      aside.two-thirds:last-child {
+        margin-right: 0; } }
 
 aside.five-sixths, img.five-sixths {
   float: left;
@@ -141,6 +189,14 @@ aside.five-sixths, img.five-sixths {
   width: 82.94039%; }
   aside.five-sixths:last-child, img.five-sixths:last-child {
     margin-right: 0; }
+  @media screen and (max-width: 480px) {
+    aside.five-sixths, img.five-sixths {
+      float: left;
+      display: block;
+      margin-right: 7.42297%;
+      width: 100%; }
+      aside.five-sixths:last-child, img.five-sixths:last-child {
+        margin-right: 0; } }
 
 aside.three-quarter, img.three-quarter {
   float: left;
@@ -149,6 +205,14 @@ aside.three-quarter, img.three-quarter {
   width: 74.41059%; }
   aside.three-quarter:last-child, img.three-quarter:last-child {
     margin-right: 0; }
+  @media screen and (max-width: 480px) {
+    aside.three-quarter, img.three-quarter {
+      float: left;
+      display: block;
+      margin-right: 7.42297%;
+      width: 100%; }
+      aside.three-quarter:last-child, img.three-quarter:last-child {
+        margin-right: 0; } }
 
 aside.half, img.half {
   float: left;
@@ -161,6 +225,14 @@ aside.half, img.half {
     margin-right: 0; }
   aside.half:nth-child(2n+1), img.half:nth-child(2n+1) {
     clear: left; }
+  @media screen and (max-width: 480px) {
+    aside.half, img.half {
+      float: left;
+      display: block;
+      margin-right: 7.42297%;
+      width: 100%; }
+      aside.half:last-child, img.half:last-child {
+        margin-right: 0; } }
 
 aside.third, img.third {
   float: left;
@@ -169,6 +241,15 @@ aside.third, img.third {
   width: 31.76157%; }
   aside.third:last-child, img.third:last-child {
     margin-right: 0; }
+  @media screen and (max-width: 480px) {
+    aside.third, img.third {
+      float: left;
+      display: block;
+      margin-right: 7.42297%;
+      width: 46.28851%;
+      margin-bottom: 1rem; }
+      aside.third:last-child, img.third:last-child {
+        margin-right: 0; } }
 
 aside.quarter, img.quarter {
   float: left;
@@ -177,6 +258,14 @@ aside.quarter, img.quarter {
   width: 23.23176%; }
   aside.quarter:last-child, img.quarter:last-child {
     margin-right: 0; }
+  @media screen and (max-width: 480px) {
+    aside.quarter, img.quarter {
+      float: left;
+      display: block;
+      margin-right: 7.42297%;
+      width: 46.28851%; }
+      aside.quarter:last-child, img.quarter:last-child {
+        margin-right: 0; } }
 
 aside.sixth, img.sixth {
   float: left;
@@ -185,6 +274,14 @@ aside.sixth, img.sixth {
   width: 14.70196%; }
   aside.sixth:last-child, img.sixth:last-child {
     margin-right: 0; }
+  @media screen and (max-width: 480px) {
+    aside.sixth, img.sixth {
+      float: left;
+      display: block;
+      margin-right: 7.42297%;
+      width: 46.28851%; }
+      aside.sixth:last-child, img.sixth:last-child {
+        margin-right: 0; } }
 
 aside.omega {
   margin-right: 0; }
@@ -195,6 +292,9 @@ p:first-child {
 p, li {
   font-size: 0.92rem;
   line-height: 1.35rem; }
+  @media screen and (max-width: 480px) {
+    p, li {
+      font-size: 0.85rem; } }
 
 ul {
   list-style-type: none;
