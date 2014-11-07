@@ -251,7 +251,7 @@ aside.sixth, img.sixth {
 	}
 }
 
-aside.omega {
+aside.omega, img.omega {
 	@include omega();
 }
 
@@ -288,4 +288,8 @@ ul {
 ol {
 	padding: 0 0 0 1.8em;
 	margin: 0 0 1em 0;
+
+	li { 
+		padding-bottom: 0.3rem;
+	}
 }

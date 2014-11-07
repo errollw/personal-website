@@ -283,7 +283,7 @@ aside.sixth, img.sixth {
       aside.sixth:last-child, img.sixth:last-child {
         margin-right: 0; } }
 
-aside.omega {
+aside.omega, img.omega {
   margin-right: 0; }
 
 p:first-child {
@@ -309,3 +309,5 @@ ul {
 ol {
   padding: 0 0 0 1.8em;
   margin: 0 0 1em 0; }
+  ol li {
+    padding-bottom: 0.3rem; }
