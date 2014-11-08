@@ -4,6 +4,10 @@
   box-sizing: border-box; }
 
 @font-face {
+  font-family: 'Input Sans';
+  font-weight: 400;
+  src: url("fonts/InputSans-Regular.ttf"); }
+@font-face {
   font-family: 'Open Sans';
   font-weight: 600;
   src: url("fonts/OpenSans-Bold.ttf"); }
@@ -37,6 +41,9 @@ section {
     display: table; }
   section:after {
     clear: both; }
+
+span.mono {
+  font-family: "Input Sans", monospace; }
 
 #nav-list, #index-list {
   position: fixed;
@@ -72,6 +79,8 @@ section {
   text-decoration: underline;
   font-size: 0.92rem;
   line-height: 1.35rem; }
+  #index-list a.p-out::first-letter {
+    text-transform: capitalize; }
 #index-list .h1, #index-list .h2 {
   width: 100%;
   white-space: nowrap;
@@ -157,13 +166,17 @@ article {
       article:last-child {
         margin-right: 0; } }
 
-article.danger {
+article.danger, article.info {
   background-color: #fde0dc;
   color: #b0120a;
   padding: 1rem;
   margin-bottom: 1rem; }
-  article.danger p {
+  article.danger p, article.info p {
     margin: 0; }
+
+article.info {
+  background-color: #E8EAF6;
+  color: #1A237E; }
 
 aside.two-thirds {
   float: left;

@@ -31,44 +31,43 @@
             <p>Work for this course includes: </p>
 
             <ol>
-                <li>Written exercises &ndash; from the <a href="http://www.cl.cam.ac.uk/teaching/1415/CompGraph/exercises.html">course website</a> and <a href="http://www.cs.cornell.edu/~srm/fcg3/">textbook</a> </li>
-                <li>Practical exercises &ndash; learn the algorithms better by coding them </li>
-                <li>Past exam questions &ndash; discover what is expected in the exam </li>
+                <li>Written exercises &ndash; from the <a href="http://www.cl.cam.ac.uk/teaching/1415/CompGraph/exercises.html">course website</a> and <a href="http://www.cs.cornell.edu/~srm/fcg3/">textbook</a>. </li>
+                <li>Practical exercises &ndash; learn the algorithms better by coding them.</li>
+                <li>Past exam questions &ndash; discover what is expected in the exam.</li>
             </ol>
         </article>
 
         <h2>Submission of practical exercises </h2>
         <article>
-            <p>The supervision exercises require you to write a simple raytracer. You can use whatever programming language or tools for this as you wish, but I suggest using some that already have <i>vector maths</i> and the ability to set pixels in an image.</p>
-
-            <p>Therefore, I suggest that you write it in Javascript. You all should have an HTML5-compatible browser which can set pixels in a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas element</a>, and I suggest using a <a href="http://evanw.github.io/lightgl.js/docs/vector.html">library</a> for vector maths.</p>
+            <p>For the first supervision you will write a simple raytracer. You can use whatever programming language or tools for this as you wish, but <b>I suggest that you use Javascript</b>. You should have an HTML5-compatible browser which can set pixels in a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas element</a>.</p>
 
             <p>I have packaged all you need in a <a href="raytracer_week_1.zip">.zip file</a> that contains:</p>
             <ul>
-                <li><i>raytracer_week1.html</i> &ndash; open this file in a web browser to run the Javascript and render the image.</li>
-                <li><i>raytracer_week1.js</i> &ndash; this is a template for writing your own ray tracer.</li>
-                <li><i><a href="http://evanw.github.io/lightgl.js/docs/vector.html">vector.js</a></i> &ndash; this is a vector maths library, no need to modify it.</li>
+                <li><span class="mono">raytracer.html</span> &ndash; open this in a web browser to run the Javascript and render the image.</li>
+                <li><span class="mono">raytracer.js</span> &ndash; modify this template to write your raytracer.</li>
+                <li><span class="mono">vector.js</span> &ndash; this is a <a href="http://evanw.github.io/lightgl.js/docs/vector.html">vector maths library</a>, no need to modify it.</li>
             </ul>
 
-            <p>The main file you should modify is <i>raytracer_week1.js</i>. Please rename this to "CRSID_raytracer_week1.js" with your appropriate <a href="http://www.ucs.cam.ac.uk/accounts/crsid">CRSid</a> and email it to me. Beware, if you modify this filename without changing it in raytracer_week1.html, it will stop working.</p>
+            <p>The main file you should modify is <span class="mono">raytracer.js</span>. Please rename this to <span class="mono">crsid_raytracer.js</span> with your <a href="http://www.ucs.cam.ac.uk/accounts/crsid">CRSid</a> and email it to me. Beware, if you rename this file without changing it in <span class="mono">raytracer.html</span>, it will stop working.</p>
+
+            <p>I strongly encourage you to do as many practical exercises as possible, as algorithms are frequently examined and there is no better way to learn them than to code them yourself! If you struggle with the code, please let me know ahead of the supervision.</p>
         </article>
 
         <h2>Textbook</h2>
-        <aside class='three-quarter'>
+
+        <img class='quarter' src="\img/fundamentals_of_cg.jpg">
+
+        <aside class='three-quarter omega'>
             <p>I recommend acquiring a copy of <a class="p-out" data-p-out-name="Fundamentals of CG" href="http://www.cs.cornell.edu/~srm/fcg3/"><i>Fundamentals of Computer Graphics</i> [FCG] &ndash; Shirley, P. &amp; Marschner, S. (2009)</a>. This is the main textbook for the course and it covers the course's concepts and algorithms in detail, providing pseudo code and examples.</p>
-            <p>Some of the supervision exercises are taken from the book exercises.</p>
+            <p>Some of the written supervision exercises are taken from the book.</p>
             <p>Check for a copy in your college or the lab library, or try to find one online.</p>
         </aside>
 
-        <img class='quarter omega' src="\img/fundamentals_of_cg.jpg">
-
         <h1>Supervision work</h1>
         <article>
-            <p>Please complete the following <a href="http://www.cl.cam.ac.uk/teaching/1314/CompGraph/exercises.html">supervision exercises</a> and <a href="http://www.cl.cam.ac.uk/teaching/exams/pastpapers/t-ComputerGraphicsandImageProcessing.html">past papers</a>.</p>
+            <p>Please complete the following written exercises and <a class="p-out" href="http://www.cl.cam.ac.uk/teaching/exams/pastpapers/t-ComputerGraphicsandImageProcessing.html">past papers</a>.</p>
 
             <p>General instructions for handing in work can be found <a href="\teaching/#handing_in_work" target='_blank'> here</a>.</p>
-
-            <p>I strongly encourage you to do as many practical exercises as possible, as algorithms are frequently examined and there is no better way to learn them than to code them yourself! If you struggle with the code, please email me ahead of the supervision.</p>
         </article>
 
         <h2>Supervision 1</h2>
@@ -86,20 +85,32 @@
 
                 <h4>Written exercises &ndash; from the textbook</h4>
                 <ol>
-                    <li> What are the ray parameters of the intersection points between ray (1,1,1) + t(−1,−1,−1) and the sphere centered at the origin with radius 1? <i>[FCG p89]</i>
+                    <li> What are the ray parameters of the intersection points between ray <span class="mono">(1,1,1) + t(−1,−1,−1)</span> and the sphere centered at the origin with radius 1? <i>[FCG p89]</i>
                     <li> Why do most highlights on plastic objects look white, while those on gold metal look gold? <i>[FCG p242]</i></li>
                 </ol>
 
-                <h4>Practical work</h4>
+                <h4>Practical work &ndash; write a raytracer</h4>
 
-                <aside class="two-thirds">
-                    <p>Write a very simple ray-tracer. This will involve ray tracing a sphere and shading it with Phong illumination. If you are able, add more objects like blocks, and perhaps shadows and reflection.</p>
-                    <p>All you need in the <a href="raytracer_week_1.zip">.zip file</a>. Sample output might look like this:</p>
+                <img class="third" src="raytracer_example.png">
+
+                <aside class="two-thirds omega">
+                    <p>Write a simple ray-tracer. Start with raytracing a sphere and shading it with Phong illumination. Then experiment with:
+                    <ul>
+                        <li>Multiple lights of different colours,</li>
+                        <li>More objects like triangles or blocks,</li>
+                        <li>Reflection and shadows.</li>
+                    </ul>
+
+                    <p>All you need is in the <a href="raytracer_week_1.zip">.zip file</a>.</p>
                 </aside>
 
-                <img class="third omega" src="raytracer_example.png">
-
             </article>
+
+        <h2>Supervision 2</h2>
+
+        <article class='info'>
+            <p>Work for future supervisions is still being decided...</p>
+        </article>
 
         <!-- <h2>Supervision 2</h2>
         <article>
