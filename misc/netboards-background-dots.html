@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Load the Paper.js library -->
+<script type="text/javascript" src="/js/paper.js"></script>
+<!-- Define inlined PaperScript associate it with myCanvas -->
+<script type="text/paperscript" canvas="myCanvas">
+
+function Ball(r, p, v) {
+  this.radius = r;
+  this.point = p;
+  this.vector = v;
+  this.maxVec = 15;
+
+  this.dotShape = new Shape.Circle(p, r);
+  this.baseHue = Math.random() * 360;
+  this.dotShape.fillColor = {
+    hue: this.baseHue,
+    saturation: 0.1,
+    brightness: 1
+  };
+
+
+  this.checkBorders = function() {
+    var size = view.size;
+    if (this.dotShape.position.x < -this.radius)
+      this.dotShape.position.x = size.width + this.radius;
+    if (this.dotShape.position.x > size.width + this.radius)
+      this.dotShape.position.x = -this.radius;
+    if (this.dotShape.position.y < -this.radius)
+      this.dotShape.position.y = size.height + this.radius;
+    if (this.dotShape.position.y > size.height + this.radius)
+      this.dotShape.position.y = -this.radius;
+  }
+
+  this.update = function(){
+    this.dotShape.position += this.vector;
+    this.checkBorders();
+  }
+}
+
+var balls = [];
+var connections = [];
+var numBalls = 36;
+
+for (var i = 0; i < numBalls; i++) {
+  var position = Point.random() * view.size;
+  var vector = new Point({
+    angle: 360 * Math.random(),
+    length: Math.random() * 1 + 0.2
+  });
+  balls.push(new Ball(4, position, vector));
+}
+
+function onFrame() {
+
+  for (var i = 0, l = connections.length; i < l; i++)
+    connections[i].remove();
+
+  for (var i = 0, l = balls.length; i < l; i++) {
+    balls[i].update();
+    balls[i].dotShape.fillColor.saturation = 0.1;
+
+    for (var j = i+1, l = balls.length; j < l; j++) {
+
+      dot1 = balls[i].dotShape;
+      dot2 = balls[j].dotShape;
+      dot_vec = dot1.position - dot2.position;
+      
+      if (dot_vec.length < 100){
+
+        dot1.fillColor.saturation += (100-dot_vec.length)*0.005;
+
+        var connection = new Path.Line(dot1.position, dot2.position);
+        connection.strokeColor = {
+          gradient: { stops: [dot1.fillColor, dot2.fillColor] },
+          origin: dot1.position,
+          destination: dot2.position
+        }
+        connections.push(connection)
+      }
+      if (dot_vec.length < 50){
+        dot1.position += (dot_vec/dot_vec.length)*(50-dot_vec.length)*0.05;
+        dot2.position -= (dot_vec/dot_vec.length)*(50-dot_vec.length)*0.05;
+      }
+
+    }
+  }
+}
+
+
+</script>
+</head>
+<body style="margin: 0; overflow: hidden">
+  <canvas id="myCanvas" resize></canvas>
+</body>
+</html>
