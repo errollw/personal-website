@@ -52,16 +52,21 @@ for (var i = 0; i < numBalls; i++) {
   balls.push(new Ball(4, position, vector));
 }
 
+var i,j;
+var dot1, dot2, connection;
 function onFrame() {
 
-  for (var i = 0, l = connections.length; i < l; i++)
+  for (i = 0, l = connections.length; i < l; i++){
     connections[i].remove();
+  }
+  delete connections;
+  connections = [];
 
-  for (var i = 0, l = balls.length; i < l; i++) {
+  for (i = 0, l = balls.length; i < l; i++) {
     balls[i].update();
     balls[i].dotShape.fillColor.saturation = 0.1;
 
-    for (var j = i+1, l = balls.length; j < l; j++) {
+    for (j = i+1, l = balls.length; j < l; j++) {
 
       dot1 = balls[i].dotShape;
       dot2 = balls[j].dotShape;
@@ -71,7 +76,7 @@ function onFrame() {
 
         dot1.fillColor.saturation += (100-dot_vec.length)*0.005;
 
-        var connection = new Path.Line(dot1.position, dot2.position);
+        connection = new Path.Line(dot1.position, dot2.position);
         connection.strokeColor = {
           gradient: { stops: [dot1.fillColor, dot2.fillColor] },
           origin: dot1.position,
