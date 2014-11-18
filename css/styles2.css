@@ -1,7 +1,16 @@
-* {
+/* Neat 1.7.0
+ * http://neat.bourbon.io
+ * Copyright 2012-2014 thoughtbot, inc.
+ * MIT License */
+html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit; }
 
 @font-face {
   font-family: 'Input Sans';
@@ -31,15 +40,13 @@ body {
     text-decoration: underline; }
 
 section {
-  *zoom: 1;
   max-width: 50em;
   margin-left: auto;
   margin-right: auto;
   padding: 0 1.4rem; }
-  section:before, section:after {
-    content: " ";
-    display: table; }
   section:after {
+    content: "";
+    display: table;
     clear: both; }
 
 span.mono {
@@ -324,3 +331,7 @@ ol {
   margin: 0 0 1em 0; }
   ol li {
     padding-bottom: 0.3rem; }
+  ol ol {
+    margin: 0; }
+
+/*# sourceMappingURL=styles2.css.map */

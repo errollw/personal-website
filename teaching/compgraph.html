@@ -102,6 +102,7 @@
                     </ul>
 
                     <p>All you need is in the <a href="raytracer_week_1.zip">.zip file</a>. The textbook section on Ray Tracing should be very helpful <i>[FCG p69]</i>.</p>
+                    <p>Please submit images of your results as <span class="mono">.png</span> or <span class="mono">.jpg</span>.</p>
                 </aside>
 
             </article>
@@ -114,49 +115,45 @@
 
                 <h4>Written exercises &ndash; <i>Graphics pipeline, algorithms for 2D and 3D</i></h4>
                 <ol>
-                    <li> Describe how Phong's specular reflection models real specular reflection. Why is it only a rough approximation? Why is it useful?
+                    <li>Describe how Phong's specular reflection models real specular reflection. Why is it only a rough approximation? Why is it useful?</li>
+                    <li>Bézier cubics &ndash; Derive the conditions necessary for two Bézier curves to join with
+                        <ol type="a">
+                            <li>just C0-continuity</li>
+                            <li>C1-continuity</li>
+                            <li>C2-continuity</li>
+                        </ol>
+                        What is difficult about getting three Bézier curves to join in sequence with C2-continuity at the two joins?</li>
+                    <li>Describe a complete algorithm to do 3D polygon scan conversion, including details of clipping, projection, and the underlying 2D polygon scan conversion algorithm.</li>
+                </ol>
+
+                <h4>Written exercises &ndash; other</h4>
+                <ol>
+                    <li>Draw and describe a simple diagram of the <i>rendering pipeline</i>.</li>
                     <li>What is a <i>vertex shader</i>? What is a <i>fragment shader</i>?</li>
                     <li>Compare and contrast texture mapping, bump mapping, and displacement mapping.</li>
                 </ol>
 
-                <h4>Written exercises &ndash; from the textbook</h4>
-                <ol>
-                    <li> A
-                </ol>
-
                 <h4>Practical work &ndash; explore OpenGL</h4>
 
-<!--                 <img class="third" src="raytracer_example.png">
+                <img class="third" src="opengl_example.png">
 
                 <aside class="two-thirds omega">
-                    <p>Write a simple ray-tracer. Start with raytracing a sphere and shading it with Phong illumination. Then experiment with:
+                    <p>Render a scene using OpenGL. Start with something simple like a sphere or cube. Move onto adding:</p>
                     <ul>
-                        <li>Multiple lights of different colours,</li>
+                        <li>Texture mapped objects,</li>
                         <li>More objects like triangles or blocks,</li>
-                        <li>Reflection and shadows.</li>
+                        <li>Simple animations.</li>
                     </ul>
 
-                    <p>All you need is in the <a href="raytracer_week_1.zip">.zip file</a>. The textbook section on Ray Tracing should be very helpful <i>[FCG p69]</i>.</p>
-                </aside> -->
+                    <p>The online <a href="http://www.cl.cam.ac.uk/~ls426/gltutor/">GL Tutor</a> should be helpful. Please submit images of your results as <span class="mono">.png</span> or <span class="mono">.jpg</span>.</p>
+                </aside>
 
             </article>
 
-        <h2>Supervision 3</h2>
+        <!-- <h2>Supervision 3</h2>
 
         <article class='info'>
             <p>Work for future supervisions is still being decided...</p>
-        </article>
-
-        <!-- <h2>Supervision 2</h2>
-        <article>
-            <p> This supervision concerns Bézier curves (a popular exam topic) and other more advanced 2D graphical techniques.</p>
-            <ul>
-                <li> Practical exercise 2-1 (adaptive Bézier drawing) </li>
-                <li> Practical exercise 2-2 (Douglas-Peuker line chain simplification) </li>
-                <li> Written exercises 2.1.1, 2.1.2, and 2.2.1 </li>
-                <li> Written exercises 3.1.2, 3.1.3, and 3.1.4 </li>
-                <li> <a href="http://www.cl.cam.ac.uk/teaching/exams/pastpapers/y2009p4q5.pdf">2009 Paper 4 Question 5</a> </li>
-            </ul>
         </article>
 
         <h2>Supervision 3</h2>

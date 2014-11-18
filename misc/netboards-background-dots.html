@@ -16,7 +16,7 @@ function Ball(r, p, v) {
   this.baseHue = Math.random() * 360;
   this.dotShape.fillColor = {
     hue: this.baseHue,
-    saturation: 0.1,
+    saturation: 0.2,
     brightness: 1
   };
 
@@ -41,7 +41,7 @@ function Ball(r, p, v) {
 
 var balls = [];
 var connections = [];
-var numBalls = 36;
+var numBalls = 40;
 
 for (var i = 0; i < numBalls; i++) {
   var position = Point.random() * view.size;
@@ -49,7 +49,7 @@ for (var i = 0; i < numBalls; i++) {
     angle: 360 * Math.random(),
     length: Math.random() * 1 + 0.2
   });
-  balls.push(new Ball(4, position, vector));
+  balls.push(new Ball(5, position, vector));
 }
 
 var i,j;
@@ -64,7 +64,7 @@ function onFrame() {
 
   for (i = 0, l = balls.length; i < l; i++) {
     balls[i].update();
-    balls[i].dotShape.fillColor.saturation = 0.1;
+    balls[i].dotShape.fillColor.saturation = 0.2;
 
     for (j = i+1, l = balls.length; j < l; j++) {
 
