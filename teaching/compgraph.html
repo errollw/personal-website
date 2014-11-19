@@ -37,22 +37,6 @@
             </ol>
         </article>
 
-        <h2>Submission of practical exercises </h2>
-        <article>
-            <p>For the first supervision you will write a simple ray tracer. You can use whatever programming language or tools for this as you wish, but <b>I suggest that you use Javascript</b>. You should have an HTML5-compatible browser which can set pixels in a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas element</a>.</p>
-
-            <p>I have packaged all you need in a <a href="raytracer_week_1.zip">.zip file</a> that contains:</p>
-            <ul>
-                <li><span class="mono">raytracer.html</span> &ndash; open this in a web browser to run the Javascript and render the image.</li>
-                <li><span class="mono">raytracer.js</span> &ndash; modify this template to write your ray tracer.</li>
-                <li><span class="mono">vector.js</span> &ndash; this is a <a href="http://evanw.github.io/lightgl.js/docs/vector.html">vector maths library</a>, no need to modify it.</li>
-            </ul>
-
-            <p>The main file you should modify is <span class="mono">raytracer.js</span>. Please rename this to <span class="mono">crsid_raytracer.js</span> with your <a href="http://www.ucs.cam.ac.uk/accounts/crsid">CRSid</a> and email it to me. Beware, if you rename this file without changing it in <span class="mono">raytracer.html</span>, it will stop working.</p>
-
-            <p>I strongly encourage you to do as many practical exercises as possible, as algorithms are frequently examined and there is no better way to learn them than to code them yourself! If you struggle with the code, please let me know ahead of the supervision.</p>
-        </article>
-
         <h2>Textbook</h2>
 
         <img class='quarter' src="\img/fundamentals_of_cg.jpg">
@@ -101,7 +85,7 @@
                         <li>Reflection and shadows.</li>
                     </ul>
 
-                    <p>All you need is in the <a href="raytracer_week_1.zip">.zip file</a>. The textbook section on Ray Tracing should be very helpful <i>[FCG p69]</i>.</p>
+                    <p>All you need is in the <a href="raytracer.zip">.zip file</a>. The textbook section on Ray Tracing should be very helpful <i>[FCG p69]</i>.</p>
                     <p>Please submit images of your results as <span class="mono">.png</span> or <span class="mono">.jpg</span>.</p>
                 </aside>
 
@@ -130,6 +114,7 @@
                 <ol>
                     <li>Draw and describe a simple diagram of the <i>rendering pipeline</i>.</li>
                     <li>What is a <i>vertex shader</i>? What is a <i>fragment shader</i>?</li>
+                    <li>For vertex and fragment shaders, describe the difference between <span class="mono">uniform</span>, <span class="mono">attribute</span> and <span class="mono">varying</span> variables, and give examples of each.</li>
                     <li>Compare and contrast texture mapping, bump mapping, and displacement mapping.</li>
                 </ol>
 
@@ -141,11 +126,11 @@
                     <p>Render a scene using OpenGL. Start with something simple like a sphere or cube. Move onto adding:</p>
                     <ul>
                         <li>Texture mapped objects,</li>
-                        <li>More objects like triangles or blocks,</li>
-                        <li>Simple animations.</li>
+                        <li>Stylised rendering,</li>
+                        <li>Animations with the vertex shader.</li>
                     </ul>
 
-                    <p>The online <a href="http://www.cl.cam.ac.uk/~ls426/gltutor/">GL Tutor</a> should be helpful. Please submit images of your results as <span class="mono">.png</span> or <span class="mono">.jpg</span>.</p>
+                    <p>All you need is in the <a href="wegbl.zip">.zip file</a>. The online <a href="http://www.cl.cam.ac.uk/~ls426/gltutor/">GL Tutor</a> could be helpful for prototyping GLSL code. Please submit images of your results as <span class="mono">.png</span> or <span class="mono">.jpg</span>.</p>
                 </aside>
 
             </article>
@@ -179,6 +164,43 @@
             <p> Please also prepare any last questions you have about the course. </p>
         </article> -->
 
+    </section>
+
+    <section>
+        <h1>Notes on practical exercises</h1>
+        <article>
+        <p>I strongly encourage you to do as many practical exercises as possible, as algorithms are frequently examined and there is no better way to learn them than to code them yourself! If you struggle with the code, please let me know ahead of the supervision.</p>
+        </article>
+
+        <h2>Practical exercise 1</h2>
+        <article>
+            <p>For the first supervision you will write a simple ray tracer. You can use whatever programming language or tools for this as you wish, but <b>I suggest that you use Javascript</b>. You should have an HTML5-compatible browser which can set pixels in a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas element</a>.</p>
+
+            <p>I have packaged all you need in a <a href="raytracer.zip">.zip file</a> that contains:</p>
+            <ul>
+                <li><span class="mono">raytracer.html</span> &ndash; open this in a web browser to run the Javascript and render the image.</li>
+                <li><span class="mono">raytracer.js</span> &ndash; modify this template to write your ray tracer.</li>
+                <li><span class="mono">vector.js</span> &ndash; this is a <a href="http://evanw.github.io/lightgl.js/docs/vector.html">vector maths library</a>, no need to modify it.</li>
+            </ul>
+
+            <p>The file you should modify is <span class="mono">raytracer.js</span>. Please rename this to <span class="mono">crsid_raytracer.js</span> with your <a href="http://www.ucs.cam.ac.uk/accounts/crsid">CRSid</a> and email it to me. Beware, if you rename this file without changing it in <span class="mono">raytracer.html</span>, it will stop working.</p>
+        </article>
+
+        <h2>Practical exercise 2</h2>
+        <article>
+            <p>For the second supervision you will write create a scene using OpenGL. As before, you can use whatever tools you want, but <b>I suggest that you use <a class="p-out" href="https://developer.mozilla.org/en-US/docs/Web/WebGL">WebGL</a> and <a class="p-out" href="http://threejs.org/">THREE.js</a></b>. Modern browsers are WegGL-compatible, and some libraries exist which makes things easier for you.</p>
+
+            <p>THREE.js abstracts away some of the headaches of WebGL, while still giving you an idea of how the pipeline works. Some tutorials are availabloe <a href="http://aerotwist.com/tutorials/getting-started-with-three-js/">here</a>.</p> 
+
+            <p>I have packaged all you need in a <a href="webgl.zip">.zip file</a> that contains:</p>
+            <ul>
+                <li><span class="mono">wegbl.html</span> &ndash; this file contains the GLSL code for the vertex shader, fragment shader, and Javascript code for setting up the scene. Modify the code in this file.</li>
+                <li><span class="mono">three.min.js</span> &ndash; this library abstracts away lots of the headaches of WebGL, while still giving you an idea of how the pipeline works.</li>
+                <li><span class="mono">OrbitControls.js</span> &ndash; this library provides mouse controls for rotating the camera.</li>
+            </ul>
+
+            <p>The file you should modify is <span class="mono">wegbl.html</span>.</p>
+        </article>
     </section>
 
 </body>

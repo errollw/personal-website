@@ -309,6 +309,9 @@ aside.omega, img.omega {
 p:first-child {
   margin-top: 0; }
 
+p:last-child, ul:last-child, ol:last-child {
+  margin-bottom: 0; }
+
 p, li {
   font-size: 0.92rem;
   line-height: 1.35rem; }
