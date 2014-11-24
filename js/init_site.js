@@ -52,15 +52,26 @@ function init_index(){
 		$('#list-links').append($pullout_link);
 	});
 
-	
 }
 
+function toggle_mobile_menu(){
+	
+}
 
 function init_nav(){
 
 	$('body').prepend($('<nav/>').attr('id','nav-list'));
 
-	$('#nav-list').load('/nav.html')
+	$('#nav-list').load('/nav.html', function(){
+
+		$('#mobile-menu').click(function(){
+			console.log("test")
+			$('nav a, nav span').css({display: "block"});
+		})
+
+	})
+
+
 	
 }
 

@@ -68,18 +68,42 @@ span.mono {
 @media screen and (max-width: 480px) {
   #nav-list {
     position: static;
-    width: 100%;
+    width: auto;
+    height: auto;
+    overflow: hidden;
     padding: 1.4rem;
-    background-color: #5677fc;
+    background-color: #263238;
     color: white; }
-    #nav-list h1 {
+    #nav-list #mobile-menu {
+      float: left;
       display: block;
-      border-bottom: none;
+      margin-right: 7.42297%;
+      width: 19.43277%;
+      margin-right: 0;
+      margin-top: 0;
+      margin-bottom: 0; }
+      #nav-list #mobile-menu:last-child {
+        margin-right: 0; }
+    #nav-list h1 {
       padding: 0;
-      margin: 0;
-      height: 100%; }
+      margin-top: 0;
+      margin-bottom: 0;
+      border-bottom: none;
+      float: left;
+      display: block;
+      margin-right: 7.42297%;
+      width: 73.14426%; }
+      #nav-list h1:last-child {
+        margin-right: 0; }
     #nav-list a, #nav-list span {
-      display: none; } }
+      float: left;
+      display: block;
+      margin-right: 7.42297%;
+      width: 100%;
+      color: white;
+      display: none; }
+      #nav-list a:last-child, #nav-list span:last-child {
+        margin-right: 0; } }
 
 #index-list a.p-out {
   color: #3f51b5;
