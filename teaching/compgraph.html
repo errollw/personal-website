@@ -58,12 +58,12 @@
 
             <article>
 
-                <p> This supervision concerns the fundamental concepts of images and vision, simple raytracing, and shading.</p>
+                <!-- <p> This supervision concerns the fundamental concepts of images and vision, simple raytracing, and shading.</p> -->
 
                 <h4>Written exercises &ndash; <i>Introduction and simple rendering</i></h4>
                 <ol>
                     <li> Why is it better to look at faint stars and comets slightly off-centre rather than looking directly at them? </li>
-                    <li> Calculate the ultimate monitor resolution (i.e. colour pixels/inch) beyond which better resolution will be unnecessary. </li>
+                    <!-- <li> Calculate the ultimate monitor resolution (i.e. colour pixels/inch) beyond which better resolution will be unnecessary. </li> -->
                     <li> Why do we use square pixels? Would hexagonal pixels be better? What about triangles? Do you see any difficulties building graphics hardware with these other two schemes?</li>
                 </ol>
 
@@ -95,10 +95,11 @@
 
             <article>
 
-                <p> This supervision concerns the fundamental concepts of images and vision, simple raytracing, and shading.</p>
+                <!-- <p> This supervision concerns the fundamental concepts of images and vision, simple raytracing, and shading.</p> -->
 
                 <h4>Written exercises &ndash; <i>Graphics pipeline, algorithms for 2D and 3D</i></h4>
                 <ol>
+                	<li>Why do we use matricies in graphics, why are they useful?</li>
                     <li>Describe how Phong's specular reflection models real specular reflection. Why is it only a rough approximation? Why is it useful?</li>
                     <li>Bézier cubics &ndash; Derive the conditions necessary for two Bézier curves to join with
                         <ol type="a">
@@ -107,7 +108,16 @@
                             <li>C2-continuity</li>
                         </ol>
                         What is difficult about getting three Bézier curves to join in sequence with C2-continuity at the two joins?</li>
-                    <li>Describe a complete algorithm to do 3D polygon scan conversion, including details of clipping, projection, and the underlying 2D polygon scan conversion algorithm.</li>
+                    <li>Break down the following 2D lines into a BSP-tree, splitting them if necessary:
+                    	<ul>
+                            <li>(0,0)-(2,2)</li>
+                            <li>(3,4)-(1, 3)</li>
+                            <li>(1,0)-(-3,1)</li>
+                            <li>(0,3)-(3,3)</li>
+                            <li>(2,0)-(2,1)</li>
+                        </ul>
+                    </li>
+                    <!-- <li>Describe a complete algorithm to do 3D polygon scan conversion, including details of clipping, projection, and the underlying 2D polygon scan conversion algorithm.</li> -->
                 </ol>
 
                 <h4>Written exercises &ndash; other</h4>
@@ -123,25 +133,61 @@
                 <img class="third" src="opengl_example.png">
 
                 <aside class="two-thirds omega">
-                    <p>Render a scene using OpenGL. Start with something simple like a sphere or cube. Move onto adding:</p>
+                    <p>Render a scene using OpenGL, including multiple objects, shading, and texture mapping. Move onto adding:</p>
                     <ul>
-                        <li>Texture mapped objects,</li>
-                        <li>Stylised rendering,</li>
-                        <li>Animations with the vertex shader.</li>
+                        <li>Bump or displacement mapped objects,</li>
+                        <li>Stylised rendering (e.g. toon shading),</li>
+                        <li>Animations, perhaps with the vertex shader.</li>
                     </ul>
 
-                    <p>All you need is in the <a href="wegbl.zip">.zip file</a>. The online <a href="http://www.cl.cam.ac.uk/~ls426/gltutor/">GL Tutor</a> could be helpful for prototyping GLSL code. Please submit images of your results as <span class="mono">.png</span> or <span class="mono">.jpg</span>.</p>
+                    <p>All you need to get started is in the <a href="webgl.zip">.zip file</a>. The online <a href="http://www.cl.cam.ac.uk/~ls426/gltutor/">GL Tutor</a> could be helpful for prototyping GLSL code. Please submit images of your results as <span class="mono">.png</span> or <span class="mono">.jpg</span>.</p>
                 </aside>
 
             </article>
 
-        <!-- <h2>Supervision 3</h2>
+        <h2>Supervision 3</h2>
+
+            <article>
+
+                <!-- <p> This supervision concerns the fundamental concepts of images and vision, simple raytracing, and shading.</p> -->
+
+                <h4>Written exercises &ndash; <i>Colour, displays and image processing</i></h4>
+                <ol>
+                    <li>Explain the use of each of the following colour spaces:
+                        <ol type="a">
+                            <li>RGB</li>
+                            <li>XYZ</li>
+                            <li>HLS</li>
+                            <li>LUV</li>
+                        </ol></li>
+                   	<li>Explain the difference between additive colour (RGB) and subtractive colour (CMY). Where is each used and why is it used there?</li>
+                   	<li>Compare the two methods of Error Diffusion described in the notes, with the aid of a sample image.</li>
+                </ol>
+
+                <h4>Written exercises &ndash; from the textbook</h4>
+                <ol>
+                    <li> Find several ways to implement an infinite 2D checkerboard using surface and solid techniques. Which is best?</li>
+                </ol>
+
+                <h4>Past exam papers</h4>
+                <ol>
+	                <li> <a href="http://www.cl.cam.ac.uk/teaching/exams/pastpapers/y2008p5q5.pdf">2008 Paper 5 Question 5</a> </li>
+	                <li> <a href="http://www.cl.cam.ac.uk/teaching/exams/pastpapers/y2008p6q5.pdf">2008 Paper 6 Question 5</a> </li>
+                </ol>
+
+                <h4>Practical work &ndash; explore OpenGL</h4>
+
+                <p>Implement some of the line and curve drawing and clipping algorithms in 2D. The online <a href="http://www.cl.cam.ac.uk/~ls426/graphicstutor/">graphics tutor</a> should be helpful.</p>
+
+            </article>
+
+        <h2>Supervision 4</h2>
 
         <article class='info'>
             <p>Work for future supervisions is still being decided...</p>
         </article>
 
-        <h2>Supervision 3</h2>
+<!--         <h2>Supervision 3</h2>
         <article>
             <p> This supervision covers some of the more advanced 2D and 3D graphics algorithms and techniques. </p>
             <ul>
@@ -186,11 +232,11 @@
             <p>The file you should modify is <span class="mono">raytracer.js</span>. Please rename this to <span class="mono">crsid_raytracer.js</span> with your <a href="http://www.ucs.cam.ac.uk/accounts/crsid">CRSid</a> and email it to me. Beware, if you rename this file without changing it in <span class="mono">raytracer.html</span>, it will stop working.</p>
         </article>
 
-        <h2>Practical exercise 2</h2>
+        <h2>Practical exercise 3</h2>
         <article>
             <p>For the second supervision you will write create a scene using OpenGL. As before, you can use whatever tools you want, but <b>I suggest that you use <a class="p-out" href="https://developer.mozilla.org/en-US/docs/Web/WebGL">WebGL</a> and <a class="p-out" href="http://threejs.org/">THREE.js</a></b>. Modern browsers are WegGL-compatible, and some libraries exist which makes things easier for you.</p>
 
-            <p>THREE.js abstracts away some of the headaches of WebGL, while still giving you an idea of how the pipeline works. Some tutorials are availabloe <a href="http://aerotwist.com/tutorials/getting-started-with-three-js/">here</a>.</p> 
+            <p>THREE.js abstracts away some of the headaches of WebGL, while still giving you an idea of how the pipeline works. Some tutorials are available <a href="http://aerotwist.com/tutorials/getting-started-with-three-js/">here</a>.</p> 
 
             <p>I have packaged all you need in a <a href="webgl.zip">.zip file</a> that contains:</p>
             <ul>
