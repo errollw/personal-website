@@ -179,7 +179,7 @@ h4 {
   font-weight: 400;
   font-size: 1rem;
   margin-top: 0em;
-  margin-bottom: 0.5rem; }
+  margin-bottom: 1rem; }
 
 article {
   float: left;
@@ -333,9 +333,6 @@ aside.omega, img.omega {
 p:first-child {
   margin-top: 0; }
 
-p:last-child, ul:last-child, ol:last-child, li:last-child {
-  margin-bottom: 0; }
-
 p, li {
   font-size: 0.92rem;
   line-height: 1.35rem; }
@@ -357,8 +354,14 @@ ol {
   padding: 0 0 0 1.8em;
   margin: 0 0 1em 0; }
   ol li {
-    padding-bottom: 0.3rem; }
+    padding-bottom: 0.5rem; }
   ol ol {
     margin: 0; }
+  ol.tight li {
+    padding-bottom: 0.1rem; }
+
+p:last-child, ul:last-child, ol:last-child, li:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0; }
 
 /*# sourceMappingURL=styles2.css.map */
