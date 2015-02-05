@@ -72,8 +72,8 @@ function init_nav(){
 function resize_page(){
 	pad_last_item();
 
-	$('#index-list').css('left', $('section').offset().left + $('section').outerWidth());
-	$('#nav-list').css('left', $('section').offset().left - $('#nav-list').width());
+	// $('#index-list').css('left', $('section').offset().left + $('section').outerWidth());
+	// $('#nav-list').css('left', $('section').offset().left - $('#nav-list').width());
 }
 
 // we want the underlines for headers to line up at the top of the screen

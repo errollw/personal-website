@@ -1,3 +1,7 @@
+/* Neat 1.7.0
+ * http://neat.bourbon.io
+ * Copyright 2012-2014 thoughtbot, inc.
+ * MIT License */
 html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -40,10 +44,10 @@ section {
   margin-left: auto;
   margin-right: auto;
   padding: 0 1.4rem; }
-  section::after {
-    clear: both;
+  section:after {
     content: "";
-    display: table; }
+    display: table;
+    clear: both; }
 
 span.mono {
   font-family: "Input Sans", monospace; }
@@ -60,49 +64,12 @@ span.mono {
     text-decoration: underline; }
   #nav-list .spacer, #index-list .spacer {
     height: 0.8rem; }
-
-@media screen and (max-width: 1300px) {
-  #nav-list {
-    visibility: hidden; } }
-@media screen and (max-width: 480px) {
-  #nav-list {
-    position: static;
-    width: auto;
-    height: auto;
-    overflow: hidden;
-    padding: 1.4rem;
-    background-color: #263238;
-    color: white; }
-    #nav-list #mobile-menu {
-      float: left;
-      display: block;
-      margin-right: 7.42297%;
-      width: 19.43277%;
-      margin-right: 0;
-      margin-top: 0;
-      margin-bottom: 0; }
-      #nav-list #mobile-menu:last-child {
-        margin-right: 0; }
-    #nav-list h1 {
-      padding: 0;
-      margin-top: 0;
-      margin-bottom: 0;
-      border-bottom: none;
-      float: left;
-      display: block;
-      margin-right: 7.42297%;
-      width: 73.14426%; }
-      #nav-list h1:last-child {
-        margin-right: 0; }
-    #nav-list a, #nav-list span {
-      float: left;
-      display: block;
-      margin-right: 7.42297%;
-      width: 100%;
-      color: white;
-      display: none; }
-      #nav-list a:last-child, #nav-list span:last-child {
-        margin-right: 0; } }
+  @media screen and (max-width: 1300px) {
+    #nav-list, #index-list {
+      visibility: hidden; } }
+  @media screen and (max-width: 480px) {
+    #nav-list, #index-list {
+      visibility: hidden; } }
 
 #index-list a.p-out {
   color: #3f51b5;
