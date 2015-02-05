@@ -54,13 +54,10 @@ function init_index(){
 
 }
 
-function toggle_mobile_menu(){
-	
-}
 
 function init_nav(){
 
-	$('body').prepend($('<nav/>').attr('id','nav-list'));
+	$('section').first().prepend($('<nav/>').attr('id','nav-list'));
 
 	$('#nav-list').load('/nav.html', function(){
 
@@ -70,9 +67,6 @@ function init_nav(){
 		})
 
 	})
-
-
-	
 }
 
 function resize_page(){

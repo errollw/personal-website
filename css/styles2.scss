@@ -87,6 +87,11 @@ span.mono {
 }
 
 #nav-list {
+
+	@include media($tablet) {
+		visibility: hidden;
+	}
+
 	@include media($mobile) {
 		position: static;
 		width: auto;
