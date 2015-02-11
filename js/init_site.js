@@ -13,7 +13,7 @@ function pad_last_item(){
 
 function init_index(){
 
-	$('body').prepend($('<nav/>').attr('id','index-list'));
+	$('#nav-div').append($('<nav/>').attr('id','index-list'));
 
 	$('#index-list').append($('<h1/>').text('This page'));
 	$('#index-list').append($('<div/>').attr('id','list-this-page'));
@@ -57,7 +57,7 @@ function init_index(){
 
 function init_nav(){
 
-	$('section').first().prepend($('<nav/>').attr('id','nav-list'));
+	$('#nav-div').prepend($('<nav/>').attr('id','nav-list'));
 
 	$('#nav-list').load('/nav.html', function(){
 
@@ -85,7 +85,9 @@ function header_offset(target_id) {
 //Runs once page is loaded
 $(function () {
 
+	$('body').prepend($('<div/>').attr('id','nav-div'));
 	init_nav();
+	$('#nav-div').append($('<div/>').attr('id','nav-spacer'));
 	init_index();
 
 	if (window.location.hash) {
@@ -106,6 +108,8 @@ $(function () {
 	    });
 	});
 
-	$(window).resize(_.debounce(resize_page, 50));
-	resize_page();
+	// $(window).resize(_.debounce(resize_page, 50));
+	// resize_page();
+
+	pad_last_item();
 });

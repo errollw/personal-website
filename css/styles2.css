@@ -40,7 +40,7 @@ body {
     text-decoration: underline; }
 
 section {
-  max-width: 50em;
+  max-width: 800px;
   margin-left: auto;
   margin-right: auto;
   padding: 0 1.4rem; }
@@ -52,8 +52,27 @@ section {
 span.mono {
   font-family: "Input Sans", monospace; }
 
-#nav-list, #index-list {
+#nav-div {
   position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  text-align: center;
+  width: 100%; }
+
+#nav-spacer {
+  position: static;
+  display: inline-block;
+  width: 800px; }
+
+#nav-list, #index-list {
+  position: static;
+  display: inline-block;
+  pointer-events: all;
+  text-align: left;
+  vertical-align: top;
   width: 15rem;
   font-size: 1rem; }
   #nav-list a, #nav-list span, #index-list a, #index-list span {

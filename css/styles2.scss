@@ -66,8 +66,25 @@ span.mono {
 	font-family: $font-mono;
 }
 
+#nav-div {
+	@include position(fixed, 0 0 0 0);
+	pointer-events: none;
+	text-align: center;
+	width: 100%;
+}
+
+#nav-spacer {
+	position: static;
+	display: inline-block;
+	width: 800px;
+}
+
 #nav-list, #index-list {
-	position: fixed;
+	position: static;
+	display: inline-block;
+	pointer-events: all;
+	text-align: left;
+	vertical-align: top;
 	width: 15rem;
 
 	font-size: 1rem;
