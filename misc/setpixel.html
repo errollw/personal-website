@@ -1,0 +1,47 @@
+<!-- http://aerotwist.com/tutorials/an-introduction-to-shaders-part-1/ -->
+
+<html>
+<head>
+<title>Graphics practical work</title>
+</head>
+<body style="font-family: Consolas,monaco,monospace; font-size: 18px; margin:16px;">
+<p style="margin-bottom:16px;">Download and edit this .html file.</p>
+<canvas id="scrn_canv" style="border: 1px solid #CCC;"></canvas>
+<script>
+
+img_w_px = 256;
+
+// find the canvas in the webpage, and get access to its data
+var canvas = document.getElementById("scrn_canv")
+var context2d = canvas.getContext("2d")
+var img_data = context2d.getImageData(0, 0, img_w_px, img_w_px)
+
+// set the size of the canvas
+canvas.width = canvas.height = img_w_px;
+
+// this function sets the color of pixels in the canvas data
+function setPixel(x, y, r, g, b) {
+	var i = (y * img_w_px+ x) * 4;
+	img_data.data[i++] = r;
+	img_data.data[i++] = g;
+	img_data.data[i++] = b;
+	img_data.data[i] = 255;
+}
+
+// ***********************************************************
+// WRITE YOUR CODE BELOW :
+// ***********************************************************
+
+// THIS IS SAMPLE CODE:
+for (y=0; y<canvas.height; y++){
+	for(x=0; x<canvas.width; x++){
+		setPixel(x, y, x, y, 128)
+	}
+}
+
+// final call is to put the data into the canvas
+context2d.putImageData(img_data, 0, 0);
+
+</script>
+</body>
+</html>
