@@ -13,9 +13,9 @@ html {
   box-sizing: inherit; }
 
 @font-face {
-  font-family: 'Input Sans';
+  font-family: 'Anonymous Pro';
   font-weight: 400;
-  src: url("fonts/InputSans-Regular.ttf"); }
+  src: url("fonts/Anonymous Pro.ttf"); }
 @font-face {
   font-family: 'Open Sans';
   font-weight: 600;
@@ -50,7 +50,7 @@ section {
     clear: both; }
 
 span.mono {
-  font-family: "Input Sans", monospace; }
+  font-family: "Anonymous Pro", monospace; }
 
 #nav-div {
   position: fixed;
@@ -343,6 +343,8 @@ ol {
     padding-bottom: 0.5rem; }
   ol ol {
     margin: 0; }
+    ol ol li {
+      padding-bottom: 0.2rem; }
   ol.tight li {
     padding-bottom: 0.1rem; }
 

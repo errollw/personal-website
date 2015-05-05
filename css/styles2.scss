@@ -5,9 +5,9 @@
 @import "neat/neat";
 
 @font-face {
-  font-family: 'Input Sans';
+  font-family: 'Anonymous Pro';
   font-weight: 400;
-  src: url('fonts/InputSans-Regular.ttf');
+  src: url('fonts/Anonymous Pro.ttf');
 }
 
 @font-face {
@@ -37,7 +37,7 @@
 
 
 $font-text: 'Open Sans', sans-serif;
-$font-mono: 'Input Sans', monospace;
+$font-mono: 'Anonymous Pro', monospace;
 
 $blue: #0090e0;
 $red:  #e4141b;
@@ -319,6 +319,9 @@ ol {
 
 	ol {
 		margin: 0;
+		li { 
+			padding-bottom: 0.2rem;
+		}
 	}
 
 	&.tight{
