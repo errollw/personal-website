@@ -111,6 +111,21 @@ span.mono {
 	}
 }
 
+#nav-mobile {
+
+	font-size: 1.2rem;
+	line-height: 100%;
+
+	@include media($mobile) {
+		font-size: 0.85rem;
+	}
+
+	div {
+		padding: 1rem 0rem;
+		border-bottom: 1px solid #DDD;
+	}
+}
+
 #index-list {
 
 	a.p-out {

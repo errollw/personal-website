@@ -11,6 +11,11 @@ function pad_last_item(){
 	$('section:last-child').css('margin-bottom', view_h);
 }
 
+function init_mobile_menu(){
+	$('body').prepend($('<section/>').attr('id','nav-mobile'));
+	$('#nav-mobile').load('/nav_mobile.html')
+}
+
 function init_index(){
 
 	$('#nav-div').append($('<nav/>').attr('id','index-list'));
@@ -87,6 +92,7 @@ $(function () {
 
 	$('body').prepend($('<div/>').attr('id','nav-div'));
 	init_nav();
+	init_mobile_menu();
 	$('#nav-div').append($('<div/>').attr('id','nav-spacer'));
 	init_index();
 
