@@ -29,9 +29,9 @@
         <h1>Computer graphics &amp; image processing</h1>
         
         <article>
-			<p>Please complete the following written exercises (from the <a class="p-out" href="http://www.cl.cam.ac.uk/teaching/1415/CompGraph/exercises.html">course website</a> and <a href="http://www.cs.cornell.edu/~srm/fcg3/">textbook</a>), practical exercises</a>, and <a href="http://www.cl.cam.ac.uk/teaching/exams/pastpapers/t-ComputerGraphicsandImageProcessing.html" class="p-out">past paper questions</a>.</p>
-			<p>General instructions for handing in work can be found <a href="\teaching/#handing_in_work" target='_blank'> here</a>. Please send me screenshots (<span class="mono">.png</span> or <span class="mono">.jpg</span>) and scripts of your practical excercises.</p>
-		</article>
+            <p>Please complete the following written exercises (from the <a class="p-out" href="http://www.cl.cam.ac.uk/teaching/1415/CompGraph/exercises.html">course website</a> and <a href="http://www.cs.cornell.edu/~srm/fcg3/">textbook</a>), practical exercises</a>, and <a href="http://www.cl.cam.ac.uk/teaching/exams/pastpapers/t-ComputerGraphicsandImageProcessing.html" class="p-out">past paper questions</a>.</p>
+            <p>General instructions for handing in work can be found <a href="\teaching/#handing_in_work" target='_blank'> here</a>. Please send me screenshots (<span class="mono">.png</span> or <span class="mono">.jpg</span>) and scripts of your practical excercises.</p>
+        </article>
 
         <h2>Supervision 1</h2>
 
@@ -40,6 +40,7 @@
                 <li>Why is it better to look at faint stars and comets slightly off-centre rather than looking directly at them? </li>
                 <li>Why do we use square pixels? Would hexagonal pixels be better? What about triangles? Do you see any difficulties building graphics hardware with these other two schemes?</li>
                 <li>What are the ray parameters of the intersection points between ray <span class="mono">(1,1,1) + t(−1,−1,−1)</span> and the sphere centered at the origin with radius 1? <i>[FCG p89]</i>
+                <li>There are many different models for illumination. Compare and contrast the <i>BSSDF</i>, <i>BRDF</i>, and <i>Phong Shading</i>. What materials are they used to represent?</li>
                 <li>Why do highlights on plastic objects look white, while those on gold metal look gold? <i>[FCG p242]</i></li>
                 <li>Start <a href='#ray-tracing'>practical exercise 1</a> &ndash; write a basic ray-tracer.</li>
             </ol>
@@ -49,7 +50,8 @@
 
         <article>
             <ol>
-            	<li>Why do we use matricies in graphics, why are they useful?</li>
+                <li>Why do we use matrices in graphics, why are they useful?</li>
+                <li>What are the OpenGL <i>Model</i>, <i>View</i>, and <i>Projection</i> matrices?</li>
                 <li>Bézier cubics &ndash; Derive the conditions necessary for two Bézier curves to join with
                     <ol type="a">
                         <li>just C0-continuity</li>
@@ -58,7 +60,7 @@
                     </ol>
                     What is difficult about getting three Bézier curves to join in sequence with C2-continuity at the two joins?</li>
                 <li>Break down the following 2D lines into a BSP-tree, splitting them if necessary:
-                	<ul>
+                    <ul>
                         <li><span class="mono">(0,0)&rarr;(2,2),&nbsp;(3,4)&rarr;(1,3),&nbsp;(1,0)&rarr;(-3,1),&nbsp;(0,3)&rarr;(3,3),&nbsp;(2,0)&rarr;(2,1)</span></li>
                     </ul>
                 </li>
@@ -77,8 +79,8 @@
                     <ul type="a">
                         <li>RGB, XYZ, HLS, LUV</li>
                     </ul></li>
-               	<li>Explain the difference between <i>additive</i> colour and <i>subtractive</i> colour. Where is each colour space used and why is it used there?</li>
-               	<li>Compare <i>half-toning</i>, <i>ordered dithering</i>, and <i>error diffusion</i>, with the aid of images.</li>
+                <li>Explain the difference between <i>additive</i> colour and <i>subtractive</i> colour. Where is each colour space used and why is it used there?</li>
+                <li>Compare <i>half-toning</i>, <i>ordered dithering</i>, and <i>error diffusion</i>, with the aid of images.</li>
                 <li>Describe two ways to implement a 2D checkerboard surface material.</li>
                 <li> <a href="http://www.cl.cam.ac.uk/teaching/exams/pastpapers/y2008p5q5.pdf">2008 Paper 5 Question 5</a> </li>
                 <li> <a href="http://www.cl.cam.ac.uk/teaching/exams/pastpapers/y2008p6q5.pdf">2008 Paper 6 Question 5</a> </li>
