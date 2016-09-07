@@ -4,40 +4,8 @@
 @import "grid-settings";
 @import "neat/neat";
 
-@font-face {
-  font-family: 'Anonymous Pro';
-  font-weight: 400;
-  src: url('fonts/Anonymous Pro.ttf');
-}
-
-@font-face {
-  font-family: 'Open Sans';
-  font-weight: 600;
-  src: url('fonts/OpenSans-Bold.ttf');
-}
-
-@font-face {
-  font-family: 'Open Sans';
-  font-weight: 500;
-  src: url('fonts/OpenSans-SemiBold.ttf');
-}
-
-@font-face {
-  font-family: 'Open Sans';
-  font-weight: 400;
-  src: url('fonts/OpenSans-Regular.ttf');
-}
-
-@font-face {
-  font-family: 'Open Sans';
-  font-weight: 400;
-  font-style: italic;
-  src: url('fonts/OpenSans-Italic.ttf');
-}
-
-
-$font-text: 'Open Sans', sans-serif;
-$font-mono: 'Anonymous Pro', monospace;
+$font-text: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+$font-mono: 'Consolas', monospace;
 
 $blue: #0090e0;
 $red:  #e4141b;
@@ -48,6 +16,7 @@ $padding: 32px;
 // general settings
 body {
 	font-family: $font-text;
+	font-size: 1.1rem;
 
 	// disable link styles in general
 	a, a:visited, a:hover, a:active {
@@ -87,7 +56,7 @@ span.mono {
 	vertical-align: top;
 	width: 15rem;
 
-	font-size: 1rem;
+	font-size: 1.1rem;
 
 	a, span {
 		display: block;
@@ -141,7 +110,7 @@ span.mono {
 		color: #3f51b5;
 		text-decoration: underline;
 
-		font-size: 0.92rem;
+		font-size: 1rem;
 		line-height: 1.35rem;
 
 		&::first-letter{
@@ -162,7 +131,7 @@ span.mono {
 	}
 
 	.h2 {
-		font-size: 0.92rem;
+		font-size: 1rem;
 		padding: 0 0 0 1em;
 	}
 }
@@ -312,7 +281,7 @@ p:first-child {
 }
 
 p, li {
-	font-size: 0.92rem;
+	font-size: 1rem;
 	line-height: 1.35rem;
 
 	@include media($mobile) {
