@@ -294,6 +294,10 @@ ul {
 	padding: 0 0 0 1em;
 	margin: 0 0 1em 0;
 
+	li { 
+		padding-bottom: 0.5rem;
+	}
+
 	& > li:before { 
 	    content: "\00B7";
 	    position: relative;
@@ -307,10 +311,10 @@ ol {
 	margin: 0 0 1em 0;
 
 	li { 
-		padding-bottom: 0.5rem;
+		padding-bottom: 1rem;
 	}
 
-	ol {
+	ol, ul {
 		margin: 0;
 		li { 
 			padding-bottom: 0.2rem;

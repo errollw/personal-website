@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>Erroll Wood &ndash; Graphics</title>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/styles2.css">
+
+    <!-- javascript -->
+    <script type='text/javascript' src='/js/lodash.js'></script>
+    <script type='text/javascript' src='/js/jquery-2.0.3.js'></script>
+    <script type='text/javascript' src='/js/jquery.scrollTo-1.4.3.1-min.js'></script>
+    <script type='text/javascript' src='/js/init_site.js'></script>
+
+  </head>
+
+  <body>
+
+    <section>
+
+        <h1>Graphics</h1>
+        
+        <article>
+            <p>The purpose of these two supervisions is to ensure you understand enough graphics to complete the Ticks. Ideally, we should have the first supervision between Ticks 1 and 2, and the second supervision between Ticks 2 and 3.</p>
+            <p>Please complete the following written exercises</a>, and <a href="http://www.cl.cam.ac.uk/teaching/exams/pastpapers/t-ComputerGraphicsandImageProcessing.html" class="p-out">past paper questions</a>. General instructions for handing in work can be found <a href="\teaching/#handing_in_work" target='_blank'> here</a>. Answers should be concise. Please don't write more than half a page for the essay-style questions.</p>
+        </article>
+
+        <h2>Supervision 1</h2>
+
+        <article>
+            <ol>
+                <li>What are the ray parameters of the intersection points between ray (1,1,1) + t(−1,−1,−1) and the sphere centered at the origin with radius 1? <i>[FCG p89]</i>
+                <li>We can define a ray-tracing viewing pyramid with the following inputs:
+                    <ul>
+                        <li><b><i>o</i></b> &ndash; the ray origin (or eye point),</li>
+                        <li><b><i>u</i></b> &ndash; the up vector,</li>
+                        <li><b><i>l</i></b> &ndash; the look vector,</li>
+                        <li><i>d</i> &ndash; the distance from the ray origin to the image plane,</li>
+                        <li><i>w</i>, <i>h</i> &ndash; the width and height of the image plane in world space, and</li>
+                        <li><i>w_px</i>, <i>h_px</i> &ndash; the width and height of the image plane in pixels.</li>
+                    </ul>
+                Sketch a diagram showing these variables. Give an expression for the ray cast through pixel (i,j) of the image plane. Assume the image origin is at the top left corner.</li>
+                <li>Why do highlights on plastic objects look white, while those on gold metal look gold? How could you implement this with the Phong reflection model?<i>[FCG p242]</i></li>
+                <li>Explain how you could implement the following effects with distributed ray tracing:
+                    <ul>
+                        <li>Soft shadows cast by point lights,</li>
+                        <li>Camera bokeh or depth-of-field, and</li>
+                        <li>Anti-aliasing.</li>
+                    </ul>
+                </li>
+                <li>If you have time, try the optional <a href='#tick_2b_distributed_ray_tracing'>practical exercise</a> &ndash; soft shadows and depth of field.</li>
+            </ol>
+        </article>
+
+        <h2>Supervision 2</h2>
+
+        <article>
+            <ol>
+                <li>What is OpenGL? Why is it an API?</li>
+                <li>What is an OpenGL shader?</li>
+                <li>Sketch a diagram of the OpenGL <i>rendering pipeline</i> that includes the following stages:
+                    <ul>
+                        <li>Vertex Shader &rarr; Primitive Setup &rarr; Clipping &rarr; Rasterization &rarr; Fragment Shader</li>
+                    </ul>
+                    Briefly explain what each stage does.
+                <li>What are the OpenGL <i>Model</i>, <i>View</i>, and <i>Projection</i> matrices?</li>
+                <li>Describe the difference between OpenGL <span class="mono">uniform</span>, <span class="mono">attribute</span> and <span class="mono">varying</span> shader variables, and give examples of each.</li>
+            </ol>
+        </article>
+
+    </section>
+
+    <section>
+        
+        <h1>Optional practical exercises</h1>
+        
+        <article>
+            <p>If you have time, I recommend you complete the optional exercises.</p>
+        </article>
+
+        <h2>Tick 2b Distributed Ray Tracing</h2>
+
+        <article>
+            <img class="third" style="margin-bottom:1rem" src="tick2star_v2.png">
+            <aside class="two-thirds omega">
+                <p>In this optional exercise, you will start to approach photo-realism. You will implement some distributed ray tracing effects: soft shadows from light sources and depth-of-field effects using the camera.</p>
+                <p>You should start from your completed Tick 2 code. You can use the following scene file to get the image on the left: <a href="graphics_assets/tick2star.xml">tick2star.xml</a>.</p>
+                <p>If you are eager explore ray tracing further, try implementing a Monte Carlo path tracer.</p>
+            </aside>
+        </article>
+
+    </section>
+    
+    <section>
+        <h1>Textbooks</h1>
+
+        <img class='quarter' src="book_fundamentals_of_cg.jpg" style="margin-bottom:1rem" >
+
+        <aside class='three-quarter omega'>
+            <p>I recommend acquiring a copy of <a class="p-out" data-p-out-name="Fundamentals of CG" href="http://www.cs.cornell.edu/~srm/fcg3/"><i>Fundamentals of Computer Graphics</i> [FCG] &ndash; Shirley, P. &amp; Marschner, S. (2009)</a>. This is the main textbook for the course and it covers the course's concepts and algorithms in detail, providing pseudo code and examples.</p>
+            <p>Some of the written supervision exercises are taken from the book.</p>
+            <p>Check for a copy in your college or the lab library, or try to find one online.</p>
+        </aside>
+    </section>
+
+    <section>
+        <img class='quarter' src="book_opengl.jpg">
+
+        <aside class='three-quarter omega'>
+            <p>Another handy book is the <a href="http://www.opengl-redbook.com/">OpenGL Programming Guide &ndash; John Kessenich, Graham Sellers, &amp; Dave Shreiner</a>. This book provides an excellent introduction to OpenGL, and will be helpful in completing the third practical exercise.</p>
+            <p>It is possible to find a copy of this book online.</p>
+        </aside>
+    </section>
+
+</body>
+
+</html>

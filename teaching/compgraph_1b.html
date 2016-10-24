@@ -1,0 +1,219 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>Erroll Wood &ndash; Computer graphics</title>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/styles2.css">
+
+    <!-- javascript -->
+    <script type='text/javascript' src='/js/lodash.js'></script>
+    <script type='text/javascript' src='/js/jquery-2.0.3.js'></script>
+    <script type='text/javascript' src='/js/jquery.scrollTo-1.4.3.1-min.js'></script>
+    <script type='text/javascript' src='/js/init_site.js'></script>
+
+  </head>
+
+  <body>
+
+    <section>
+
+        <h1>Computer graphics &amp; image processing</h1>
+        
+        <article>
+            <p>Please complete the following written and practical exercises</a>, and <a href="http://www.cl.cam.ac.uk/teaching/exams/pastpapers/t-ComputerGraphicsandImageProcessing.html" class="p-out">past paper questions</a>.</p>
+            <p>General instructions for handing in work can be found <a href="\teaching/#handing_in_work" target='_blank'> here</a>. Answers should be concise. Please don't write more than half a page for the essay-style questions. Please send me screenshots (<span class="mono">.png</span> or <span class="mono">.jpg</span>) and scripts of your practical excercises.</p>
+        </article>
+
+        <h2>Supervision 1</h2>
+
+        <article>
+            <ol>
+                <li>Complete <a href='#1_introduction_to_ray_tracing'>practical exercise 1</a> &ndash; introduction to ray tracing.</li>
+                <li>What are the ray parameters of the intersection points between ray (1,1,1) + t(−1,−1,−1) and the sphere centered at the origin with radius 1? <i>[FCG p89]</i>
+                <li>We can define a ray-tracing viewing pyramid with the following inputs:
+                    <ul>
+                        <li><b><i>o</i></b> &ndash; the ray origin (or eye point),</li>
+                        <li><b><i>u</i></b> &ndash; the up vector,</li>
+                        <li><b><i>l</i></b> &ndash; the look vector,</li>
+                        <li><i>d</i> &ndash; the distance from the ray origin to the image plane,</li>
+                        <li><i>w</i>, <i>h</i> &ndash; the width and height of the image plane in world space, and</li>
+                        <li><i>w_px</i>, <i>h_px</i> &ndash; the width and height of the image plane in pixels.</li>
+                    </ul>
+                Sketch a diagram showing these variables. Give an expression for the ray cast through pixel (i,j) of the image plane. Assume the image origin is at the top left corner.</li>
+                <li>There are many different models for illumination. Compare and contrast:
+                    <ul>
+                        <li>the <i>Phong reflection model</i>,</li>
+                        <li>the <i>BRDF</i> &ndash; bidirectional reflectance distribution function, and</li>
+                        <li>the <i>BSSRDF</i> &ndash; bidirectional surface scattering distribution function.</li>
+                    </ul>
+                What materials are they used to represent?</li>
+                <li>Why do highlights on plastic objects look white, while those on gold metal look gold? How could you implement this with the Phong reflection model?<i>[FCG p242]</i></li>
+            </ol>
+        </article>
+
+        <h2>Supervision 2</h2>
+
+        <article>
+            <ol>
+                <li>Complete <a href='#2a_shadows_and_reflections'>practical exercise 2</a> &ndash; shadows and reflections.
+                    <ul>
+                        <li>If you have time, try <a href='#2b_distributed_ray_tracing'>practical exercise 2*</a> &ndash; soft shadows and depth of field.</li>
+                    </ul>
+                </li>
+                <li>What is OpenGL? Why is it an API?</li>
+                <li>What is an OpenGL shader?</li>
+                <li>Sketch a diagram of the OpenGL <i>rendering pipeline</i> that includes the following stages:
+                    <ul>
+                        <li>Vertex Shader &rarr; Primitive Setup &rarr; Clipping &rarr; Rasterization &rarr; Fragment Shader</li>
+                    </ul>
+                    Briefly explain what each stage does.
+                <li>What are the OpenGL <i>Model</i>, <i>View</i>, and <i>Projection</i> matrices?</li>
+                <li>Describe the difference between OpenGL <span class="mono">uniform</span>, <span class="mono">attribute</span> and <span class="mono">varying</span> shader variables, and give examples of each.</li>
+                <!-- <li>Compare texture mapping, bump mapping, and displacement mapping.</li> -->
+                <!-- <li>Continue <a href='#ray-tracing'>practical exercise 1</a> &ndash; add more features to your ray-tracer.</li> -->
+            </ol>
+        </article>
+
+        <h2>Supervision 3</h2>
+
+        <article>
+            <ol>
+                <li>Complete <a href='#3_rasterization_with_opengl'>practical exercise 3</a> &ndash; rasterization with OpenGL.</li>
+                <li>Bézier cubics &ndash; Derive the conditions necessary for two Bézier curves to join with
+                    <ol type="a">
+                        <li>just C0-continuity</li>
+                        <li>C1-continuity</li>
+                        <li>C2-continuity</li>
+                    </ol>
+                    Why is it difficult to join three Bézier curves in sequence with C2-continuity at the two joins?
+                </li>
+                <li>What is an <i>acceleration structure</i>? Why are they important in graphics?</li>
+                <li>Break down the following 2D lines into a BSP-tree, splitting them if necessary:
+                    <ul>
+                        <li><span class="mono">(0,0)&rarr;(2,2),&nbsp;(3,4)&rarr;(1,3),&nbsp;(1,0)&rarr;(-3,1),&nbsp;(0,3)&rarr;(3,3),&nbsp;(2,0)&rarr;(2,1)</span></li>
+                    </ul>
+                </li>
+                <!-- <li>Explain the use of each of the following colour spaces:
+                    <ul type="a">
+                        <li>RGB, XYZ, HLS, LUV</li>
+                    </ul></li> -->
+                <!-- <li>Explain the difference between <i>additive</i> colour and <i>subtractive</i> colour. Where is each colour space used and why is it used there?</li> -->
+                <li>Compare <i>half-toning</i>, <i>ordered dithering</i>, and <i>error diffusion</i>, with the aid of diagrams.</li>
+                <!-- <li>Describe two ways to implement a 2D checkerboard surface material.</li> -->
+                <li> <a href="http://www.cl.cam.ac.uk/teaching/exams/pastpapers/y2015p4q3.pdf">2015 Paper 4 Question 3</a></li>
+                <li> <a href="http://www.cl.cam.ac.uk/teaching/exams/pastpapers/y2008p6q5.pdf">2008 Paper 6 Question 5</a> parts (a) and (b)</li>
+            </ol>
+        </article>
+
+<!--         <h2>Supervision 4</h2>
+
+        <article>
+            <ol>
+                <li> <a href="http://www.cl.cam.ac.uk/teaching/exams/pastpapers/y2011p4q3.pdf">2011 Paper 4 Question 3</a> </li>
+                <li> <a href="http://www.cl.cam.ac.uk/teaching/exams/pastpapers/y2009p4q6.pdf">2009 Paper 4 Question 6</a> </li>
+                <li> <a href="http://www.cl.cam.ac.uk/teaching/exams/pastpapers/y2006p6q5.pdf">2006 Paper 6 Question 5</a> </li>
+                <li>Continue <a href='#opengl'>practical exercise 2</a> &ndash; add more features to your OpenGL scene.</li>
+            </ol>
+            <p>Please also prepare any last questions you have about the course.</p>
+        </article> -->
+
+    </section>
+
+    <section>
+        
+        <h1>Practical exercises</h1>
+        
+        <article>
+            <p>I strongly encourage you to do these exercises, as algorithms are frequently examined and there is no better way to learn them than to code them yourself. If you struggle with the code, please let me know ahead of the supervision.</p>
+        </article>
+
+        <h2>1 Introduction to Ray Tracing</h2>
+        
+        <article>
+            <img class="third" style="margin-bottom:1rem" src="tick1.png">
+            <aside class="two-thirds omega">
+                <p>In this exercise you will write code for a simple ray tracer. I suggest you use Java, and start with the following files:
+                <ul>
+                    <li><a href="graphics_assets/tick1.zip">tick1.zip</a> &ndash; The source code that you will modify.</li>
+                    <li><a href="graphics_assets/setup_t1t2.pdf">setup_t1t2.pdf</a> &ndash; A worksheet explaining how to setup the code.</li>
+                    <li><a href="graphics_assets/tick1.pdf">tick1.pdf</a> &ndash; A worksheet explaining what to do.</li>
+                </ul>
+                <p>The textbook section on Ray Tracing should be helpful <i>[FCG p69]</i>.</p>
+            </aside>
+        </article>
+        
+        <article>
+            <p>If you are feeling more adventurous, I encourage you to write the ray tracer from scratch in the language of your choice. It should be able to handle multiple spheres and the Phong reflection model.</p>
+        </article>
+
+        <h2>2a Shadows and Reflections</h2>
+        
+        <article>
+            <img class="third" style="margin-bottom:1rem" src="tick2.png">
+            <aside class="two-thirds omega">
+                <p>In this exercise you will extend the ray tracer to handle planes, multiple lights, shadows, and reflections. The files you will use are:
+                <ul>
+                    <li><a href="graphics_assets/tick2.zip">tick2.zip</a> &ndash; The source code that you will modify.</li>
+                    <li><a href="graphics_assets/tick2.pdf">tick2.pdf</a> &ndash; A worksheet explaining what to do.</li>
+                </ul>
+                <p>As before, feel free to use a different language. If you have time, extend the ray tracer to handle triangles.</p>
+            </aside>
+        </article>
+
+        <h2>2b Distributed Ray Tracing</h2>
+
+        <article>
+            <img class="third" style="margin-bottom:1rem" src="tick2star_v2.png">
+            <aside class="two-thirds omega">
+                <p>In this optional exercise, you will start to approach photo-realism. You will implement some distributed ray tracing effects: soft shadows from light sources and depth-of-field effects using the camera.</p>
+                <p>You should start from your completed exercise 2a code. You can use the following scene file to get the image on the left: <a href="graphics_assets/tick2star.xml">tick2star.xml</a>.</p>
+                <p>If you are eager explore ray tracing further, try implementing a Monte Carlo path tracer.</p>
+            </aside>
+        </article>
+
+        <h2>3 Rasterization with OpenGL</h2>
+
+        <article>
+            <img class="third" style="margin-bottom:1rem" src="tick3.png">
+            <aside class="two-thirds omega">
+                <p>In this exercise you will write code for rendering an image with OpenGL. The files you will use are:</p>
+                <ul>
+                    <li><a href="graphics_assets/tick3.zip">tick3.zip</a> &ndash; The source code that you will modify.</li>
+                    <li><a href="graphics_assets/setup_t3.pdf">setup_t3.pdf</a> &ndash; A worksheet explaining how to setup the code.</li>
+                    <li><a href="graphics_assets/tick3.pdf">tick3.pdf</a> &ndash; A worksheet explaining what to do.</li>
+                </ul>
+                <p>The textbook on OpenGL should be helpful.</p>
+            </aside>
+        </article>
+
+    </section>
+    
+    <section>
+        <h1>Textbooks</h1>
+
+        <img class='quarter' src="book_fundamentals_of_cg.jpg" style="margin-bottom:1rem" >
+
+        <aside class='three-quarter omega'>
+            <p>I recommend acquiring a copy of <a class="p-out" data-p-out-name="Fundamentals of CG" href="http://www.cs.cornell.edu/~srm/fcg3/"><i>Fundamentals of Computer Graphics</i> [FCG] &ndash; Shirley, P. &amp; Marschner, S. (2009)</a>. This is the main textbook for the course and it covers the course's concepts and algorithms in detail, providing pseudo code and examples.</p>
+            <p>Some of the written supervision exercises are taken from the book.</p>
+            <p>Check for a copy in your college or the lab library, or try to find one online.</p>
+        </aside>
+    </section>
+
+    <section>
+        <img class='quarter' src="book_opengl.jpg">
+
+        <aside class='three-quarter omega'>
+            <p>Another handy book is the <a href="https://www.ics.uci.edu/~gopi/CS211B/opengl_programming_guide_8th_edition.pdf">OpenGL Programming Guide</a>. This book provides an excellent introduction to OpenGL, and will be helpful in completing the third practical exercise.</p>
+        </aside>
+    </section>
+
+</body>
+
+</html>
