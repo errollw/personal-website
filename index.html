@@ -3,46 +3,74 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Erroll Wood &ndash; About</title>
+    <title>Erroll Wood &ndash; About me</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <!-- stylesheets -->
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/styles2.css">
-    <!-- javascript -->
-    <script type='text/javascript' src='/js/lodash.js'></script>
-    <script type='text/javascript' src='/js/jquery-2.0.3.js'></script>
-    <script type='text/javascript' src='/js/jquery.scrollTo-1.4.3.1-min.js'></script>
-    <script type='text/javascript' src='/js/init_site.js'></script>
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
 
 <body>
 
-<!--     <section>
-        <article><h2 href="">About &nbsp; Publications &nbsp; Teaching &nbsp; Other</h2></article>
-    </section>
- -->
-    <section>
-        <h1>About</h1>
-        <img class='third' src="img/profile_1x1_512.jpg">
-        <aside class='two-thirds omega'>
-            <p>I am a PhD student in the <a class='p-out' href="http://www.cl.cam.ac.uk/research/rainbow/">Rainbow Group</a> (graphics &amp; interaction) at the University of Cambridge <a href="http://www.cl.cam.ac.uk/">Computer Laboratory</a>, supervised by <a href="http://www.cl.cam.ac.uk/~pr10/">Professor Peter Robinson</a>.</p>
-            <p>My research interests include graphics, vision, gaze estimation, large displays, and ubiquitous computing. </p>
-            <p>My preferred method of contact is email: <a href="mailto:eww23@cam.ac.uk"><span class='mono'>eww23@cam.ac.uk</span></a>. </p>
+    <div id='nav-mobile'>
+        <a href="\index.html">About</a>
+        <a href="\publications">Publications</a>
+        <a href="\other">Other things</a>
+        <a href="https://github.com/errollw" target='_blank'> GitHub </a>
+    </div>
+
+    <header>
+        <aside id='nav-list'>
+            <h1>Erroll Wood</h1>
+            <a href="\index.html">About</a>
+            <span class='spacer'></span> 
+            <a href="\publications">Publications</a>
+            <a href="\other">Other things</a>
+            <span class='spacer'></span>
+            <a href="https://github.com/errollw" target='_blank'> GitHub </a>
         </aside>
+        <div style="width:860px; margin: 0 1rem 0 1rem"></div>
+        <aside id='index-list'>
+            <h1>This page</h1>
+            <a href="#about_me">About me</a>
+            <a class="sml" href="#brief_cv">Brief CV</a>
+            <h2>Links</h2>
+            <a href="https://www.microsoft.com/en-us/research/lab/microsoft-research-cambridge/">Microsoft Cambridge</a>
+            <a class="sml" href="https://www.microsoft.com/microsoft-hololens/en-gb">HoloLens</a>
+            <a href="http://www.cl.cam.ac.uk/research/rainbow/">Rainbow Group</a>
+            <a href="/assets/ErrollWood-CV.pdf">Curriculum vitae</a>
+        </aside>
+    </header>
+
+    <section>
+        <h1 id="about_me">About me</h1>
+        <div class=flex-container>
+            <img class='img' src="img/profile_1x1_lisbon.png">
+            <div>
+            <p>I am a postdoctoral researcher in <a href="https://www.microsoft.com/en-us/research/lab/microsoft-research-cambridge/">Microsoft Cambridge</a> working in the <a href="https://www.microsoft.com/microsoft-hololens/en-gb">HoloLens</a> Science team lead by <a href="https://www.microsoft.com/en-us/research/people/jamiesho/">Jamie Shotton</a>.</p>
+
+            <p>Before then, I was a PhD student in the <a href="http://www.cl.cam.ac.uk/research/rainbow/">Rainbow Group</a> (graphics &amp; interaction) at the University of Cambridge <a href="http://www.cl.cam.ac.uk/">Computer Laboratory</a>, supervised by <a href="http://www.cl.cam.ac.uk/~pr10/">Professor Peter Robinson</a>. My PhD concerned gaze estimation with graphics.</p>
+
+            <p>My preferred method of contact is email: <a href="mailto:eww23@cam.ac.uk"><span>eww23@cam.ac.uk</span></a>. </p>
+            </div>
+        </div>
     </section>
 
     <section>
-        <h2 id='testid'>Brief CV </h2>
-        <article>
-            <p>I am currently writing up my PhD on gaze estimation using learning-by-synthesis and analysis-by-synthesis. My publications are available <a href="/publications/">here</a>.</p>
-            <p style="margin-bottom:0">I graduated from Cambridge University in July 2013 with both a <b>MEng (Distinction)</b> in the Computer Science Tripos (CST) Part III and a <b>BA (First Class)</b> in CST Part II. </p>
-            <ul>
-            <li> For my MEng, I developed a gaze tracking system for tablets (supervisor: <a href="https://www.andreas-bulling.de/" target="_blank">Dr Andreas Bulling</a>).</li>
-            <li> For my BA, I devloped a renderer for volumetric fractals (supervisor: <a href="http://bentonian.com/" target="_blank">Dr Alex Benton</a>).</li>
-            </ul>
-            <p> I have interned at <a href="https://www.microsoft.com/en-us/research/lab/microsoft-research-cambridge" target="_blank">Microsoft Research Cambridge</a>, the University of Cambridge Computer Lab, and <a href="http://www.qualcomm.com/about/research/locations/cambridge" target="_blank">Qualcomm Research Cambridge</a>.</p>
-            <p> Check out <a class='p-out' data-p-out-name='Curriculum Vitae' href="/assets/ErrollWood-CV.pdf" target="_blank">my CV</a> for more details.</p>
-        </article>
+        <h2 id="brief_cv">Brief CV</h2>
+
+        <p>I am in the final stages of completing my PhD on <b>Gaze Estimation with Graphics</b>: investingating both learning-by-synthesis (machine learning with synthetic training data) and analysis-by-synthesis (model fitting with render-and-compare) approaches for estimating eye gaze. My publications are available <a href="/publications/">here</a>.</p>
+
+        <p>I have taught undergraduate computer vision and graphics courses for over 100 hours, and supervised several final year projects. I recently took part in designing a new set of practical exercises for the first year <a href="https://www.cl.cam.ac.uk/teaching/1617/Graphics/materials.html">graphics course</a>.</p>
+
+        <p>I graduated from Cambridge University in July 2013 with both a MEng (Distinction) in the Computer Science Tripos (CST) Part III and a BA (First Class) in CST Part II. </p>
+
+        <ul>
+        <li> For my MEng, I developed a gaze tracking system for tablets (supervisor: <a href="https://www.andreas-bulling.de/">Dr Andreas Bulling</a>).</li>
+        <li> For my BA, I devloped a renderer for volumetric fractals (supervisor: <a href="http://bentonian.com/">Dr Alex Benton</a>).</li>
+        </ul>
+
+        <p> In the past I have interned at Microsoft Research Cambridge, the University of Cambridge Computer Lab, and Qualcomm Research Cambridge.</p>
+
+        <p> Check out <a href="/assets/ErrollWood-CV.pdf">my CV</a> for more details.</p>
     </section>
 </body>
 

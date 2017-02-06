@@ -5,148 +5,179 @@
     <meta charset="utf-8">
     <title>Erroll Wood &ndash; Publications</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <!-- stylesheets -->
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/styles2.css">
-    <!-- javascript -->
-    <script type='text/javascript' src='/js/lodash.js'></script>
-    <script type='text/javascript' src='/js/jquery-2.0.3.js'></script>
-    <script type='text/javascript' src='/js/jquery.scrollTo-1.4.3.1-min.js'></script>
-    <script type='text/javascript' src='/js/init_site.js'></script>
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
 
 <body>
 
+    <div id='nav-mobile'>
+        <a href="\index.html">About</a>
+        <a href="\publications">Publications</a>
+        <a href="\other">Other things</a>
+        <a href="https://github.com/errollw" target='_blank'> GitHub </a>
+    </div>
+
+    <header>
+        <aside id='nav-list'>
+            <h1>Erroll Wood</h1>
+            <a href="\index.html">About</a>
+            <span class='spacer'></span> 
+            <a href="\publications">Publications</a>
+            <a href="\other">Other things</a>
+            <span class='spacer'></span>
+            <a href="https://github.com/errollw" target='_blank'> GitHub </a>
+        </aside>
+        <div style="width:860px; margin: 0 1rem 0 1rem"></div>
+        <aside id='index-list'>
+            <h1>This page</h1>
+            <a href="#publications">Publications</a>
+            <a class="sml" href="#conference_proceedings">Conference proceedings</a>
+            <span class='spacer'></span> 
+            <a href="#other_writings">Other writing</a>
+            <h2>Links</h2>
+            <a href="https://youtu.be/n_htSvUq7iU">3DMM gaze estimation</a>
+            <a href="http://www.cl.cam.ac.uk/research/rainbow/projects/unityeyes/tutorial.html">UnityEyes tutorial</a>
+        </aside>
+    </header>
+
     <section>
-        <h1>Publications</h1>
+        <h1 id="publications">Publications</h1>
+
         <article>
-            <p>Here you can find conference publications, presentations, and other writings completed during the course of my degrees &ndash; <a href="http://www.cl.cam.ac.uk/teaching/" class='p-out'>Computer Science Tripos</a> Part II and Part III.</p>
+            <p>Here you can find conference publications, presentations, and other pieces of written work. The two dissertations were completed during the course of my degrees &ndash; <a href="http://www.cl.cam.ac.uk/teaching/" class='p-out'>Computer Science Tripos</a> Part II and Part III.</p>
         </article>
     </section>
 
     <section>
-        <h2>Conference proceedings</h2>
-    </section>
+        <h2 id="conference_proceedings">Conference proceedings</h2>
 
-    <section>
-        <img class='sixth' src="iss2016.jpg" style="margin-bottom:1rem;">
-        <aside class='five-sixths omega' style="margin-bottom:1rem;">
-            <p>
+        <div class=flex-container>
+            <img class='img-sml' src="iss2016.jpg">
+            <div>
+                <p>
                 <a href="iss2016.pdf">ShadowHands &ndash; High-Fidelity Remote Hand Gesture Visualization using a Hand Tracker</a> <br/>
                 <b>Erroll Wood</b>, Jonathan Taylor, John Fogarty, Andrew Fitzgibbon, Jamie Shotton<br/>
-                <i>Interactive Surfaces and Spaces, ISS 2016 (to appear)</i><br/>
-                <a href="iss2016.pdf">paper to come</a>
-            </p>
-        </aside>
-    </section>
+                <i>Interactive Surfaces and Spaces, ISS 2016</i><br/>
+                <a href="iss2016.pdf">paper</a>
+                </p>
+            </div>
+        </div>
 
-    <section>
-        <img class='sixth' src="eccv2016.jpg" style="margin-bottom:1rem;">
-        <aside class='five-sixths omega' style="margin-bottom:1rem;">
-            <p>
+        <div class=flex-container>
+            <img class='img-sml' src="eccv2016.jpg">
+            <div>
+                <p>
                 <a href="eccv2016.pdf">A 3D morphable eye region model for gaze estimation</a> <br/>
                 <b>E. Wood</b>, T. Baltrusaitis, L. P. Morency, P. Robinson, and A. Bulling<br/>
-                <i>European Converence for Computer Vision, ECCV 2016 (to appear)</i> <br/>
-                <a href="eccv2016.pdf">paper</a> <a href="eg2016.pdf">poster</a> <a href="https://youtu.be/n_htSvUq7iU">video</a>
-            </p>
-        </aside>
-    </section>
+                <i>European Converence for Computer Vision, ECCV 2016</i><br/>
+                <a href="eccv2016.pdf">paper</a> &middot; <a href="eg2016.pdf">poster</a>  &middot; <a href="https://youtu.be/n_htSvUq7iU">video</a>
+                </p>
+            </div>
+        </div>
 
-    <section>
-        <img class='sixth' src="siggraph2016.jpg" style="margin-bottom:1rem;">
-        <aside class='five-sixths omega' style="margin-bottom:1rem;">
-            <p>
-                <a href="siggraph2016.pdf">Efficient and Precise Interactive Hand Tracking Through Joint, Continuous Optimization of Pose and Correspondences</a>,
-                J. Taylor, L. Bordeaux, T. Cashman, B. Corish, C. Keskin, T. Sharp, E. Soto, D. Sweeney, J. Valentin, B. Luff, A. Topalian, <b>E. Wood</b>, S. Khamis, P. Kohli, S. Izadi, R. Banks, A. Fitzgibbon, J. Shotton, <i>SIGGRAPH 2016</i>,
-                <a href="siggraph2016.pdf">paper</a> <a href="https://www.youtube.com/watch?v=QTz1zQAnMcU">video</a>
-            </p>
-        </aside>
-    </section>
+        <div class=flex-container>
+            <img class='img-sml' src="siggraph2016.jpg">
+            <div>
+                <p>
+                <a href="siggraph2016.pdf">Efficient and Precise Interactive Hand Tracking Through Joint, Continuous Optimization of Pose and Correspondences</a> <br/>
+                Jonathan Taylor, Lucas Bordeaux, Thomas Cashman, Bob Corish, Cem Keskin, Toby Sharp, Eduardo Soto, David Sweeney, Julien Valentin, Benjamin Luff, Arran Topalian, <b>Erroll Wood</b>, Sameh Khamis, Pushmeet Kohli, Shahram Izadi, Richard Banks, Andrew Fitzgibbon, Jamie Shotton<br/>
+                <i>ACM Transactions on Graphics, TOG 2016</i><br/>
+                <a href="siggraph2016.pdf">paper</a> &middot; <a href="https://www.youtube.com/watch?v=QTz1zQAnMcU">video</a>
+                </p>
+            </div>
+        </div>
 
-    <section>
-        <img class='sixth' src="etra2016.jpg" style="margin-bottom:1rem;">
-        <aside class='five-sixths omega'>
-            <p>
+        <div class=flex-container>
+            <img class='img-sml' src="etra2016.jpg">
+            <div>
+                <p>
                 <a href="http://www.cl.cam.ac.uk/research/rainbow/projects/unityeyes/">Learning an Appearance-based Gaze Estimator from One Million Synthesized Images</a> <br/>
                 <b>E. Wood</b>, T. Baltrusaitis, L. P. Morency, P. Robinson, and A. Bulling<br/>
-                <i>Eye-Tracking Research &amp; Applications, ETRA 2016</i> <span class="award">Emerging Investigator Award</span><br/>
-                <a href="etra2016.pdf">paper</a> 
-                <a href="http://www.cl.cam.ac.uk/research/rainbow/projects/unityeyes/">project page</a>
+                <i>Eye-Tracking Research &amp; Applications, ETRA 2016</i> <span class="award">&#9733; Emerging Investigator Award</span><br/>
+                <a href="etra2016.pdf">paper</a>  &middot; 
+                <a href="http://www.cl.cam.ac.uk/research/rainbow/projects/unityeyes/">project page</a> &middot; 
                 <a href="http://www.cl.cam.ac.uk/research/rainbow/projects/unityeyes/tutorial.html">how-to</a>
-            </p>
-        </aside>
-    </section>
+                </p>
+            </div>
+        </div>
 
-    <section>
-        <img class='sixth' src="iccv2015.jpg" style="margin-bottom:1rem;">
-        <aside class='five-sixths omega'>
-            <p>
+        <div class=flex-container>
+            <img class='img-sml' src="iccv2015.jpg">
+            <div>
+                <p>
                 <a href="http://www.cl.cam.ac.uk/research/rainbow/projects/syntheseyes/">Rendering of Eyes for Eye-Shape Registration and Gaze Estimation</a> <br/>
                 <b>E. Wood</b>, T. Baltrusaitis, X. Zhang, Y. Sugano, P. Robinson, and A. Bulling<br/>
                 <i>International Conference for Computer Vision, ICCV 2015</i> <br/>
-                <a href="iccv2015.pdf">paper</a>
-                <a href="https://www.youtube.com/watch?v=q1Jmo5z0K08">video</a>
-                <a href="http://arxiv.org/abs/1505.05916">arXiv</a>
+                <a href="iccv2015.pdf">paper</a> &middot; 
+                <a href="https://www.youtube.com/watch?v=q1Jmo5z0K08">video</a> &middot; 
+                <a href="http://arxiv.org/abs/1505.05916">arXiv</a> &middot; 
                 <a href="http://www.technologyreview.com/view/537891/virtual-eyes-train-deep-learning-algorithm-to-recognize-gaze-direction/">press (MIT)</a>
-            </p>
-        </aside>
-    </section>
+                </p>
+            </div>
+        </div>
 
-    <section>
-        <img class='sixth' src="its2014.jpg" style="margin-bottom:1rem;">
-        <aside class='five-sixths omega' style="margin-bottom:1rem;">
-            <p>
+        <div class=flex-container>
+            <img class='img-sml' src="its2014.jpg">
+            <div>
+                <p>
                 <a href="https://netboards.cl.cam.ac.uk/secure/">NetBoards: Investigating a Collection of Personal Noticeboard Displays in the Workplace</a> <br/>
-				<b>Erroll Wood</b> and Peter Robinson <br/>
+                <b>Erroll Wood</b> and Peter Robinson <br/>
                 <i>Interactive Tabletops &amp; Surfaces, ITS 2014 (invited demo)</i> <br/>
-                <a href="https://netboards.cl.cam.ac.uk/secure/">project page</a>
-                <a href="its2014.pdf">paper</a>
-                <a href="its2014.pptx">presentation</a>
+                <a href="https://netboards.cl.cam.ac.uk/secure/">project page</a> &middot; 
+                <a href="its2014.pdf">paper</a> &middot; 
+                <a href="its2014.pptx">presentation</a> &middot; 
                 <a href="https://github.com/errollw/smartboards2">code</a>
-            </p>
-        </aside>
-    </section>
+                </p>
+            </div>
+        </div>
 
-    <section>
-        <img class='sixth' src="etra2014.jpg">
-        <aside class='five-sixths omega'>
-            <p>
+        <div class=flex-container>
+            <img class='img-sml' src="etra2014.jpg">
+            <div>
+                <p>
                 <a href="http://www.cl.cam.ac.uk/research/rainbow/projects/eyetab/">EyeTab: Model-based gaze estimation on unmodified tablet computers</a> <br/>
-				<b>Erroll Wood</b> and Andreas Bulling <br/>
+                <b>Erroll Wood</b> and Andreas Bulling <br/>
                 <i>Eye-Tracking Research &amp; Applications, ETRA 2014</i> <br/>
-                <a href="http://www.cl.cam.ac.uk/research/rainbow/projects/eyetab/">project page</a>
-                <a href="http://www.cl.cam.ac.uk/research/rainbow/projects/eyetab/files/eww23_etra2014.pdf">paper</a>
+                <a href="http://www.cl.cam.ac.uk/research/rainbow/projects/eyetab/">project page</a> &middot; 
+                <a href="http://www.cl.cam.ac.uk/research/rainbow/projects/eyetab/files/eww23_etra2014.pdf">paper</a> &middot; 
                 <a href="https://github.com/errollw/EyeTab/">code</a>
-            </p>
-        </aside>
+                </p>
+            </div>
+        </div>
+
     </section>
 
     <section>
-        <h2>Other writings</h2>
-        <img class='sixth' src="part_3_diss.jpg" style="margin-bottom:1rem;">
-        <aside class='five-sixths omega' style="margin-bottom:1rem;">
-            <p>
+
+        <h1 id="other_writings">Other writings</h2>
+
+        <div class=flex-container>
+            <img class='img-sml' src="part_3_diss.jpg">
+            <div>
+                <p>
                 <a href="/assets/eww23_part3_diss.pdf">Gaze Tracking for Commodity Portable Devices</a> <br/>
                 <b>Erroll Wood</b>, Andreas Bulling, Peter Robinson <br/>
                 <i>University of Cambridge, CST Part III (MEng dissertation)</i> <br/>
-                <a href="/assets/eww23_part3_diss.pdf">dissertation</a>
+                <a href="/assets/eww23_part3_diss.pdf">dissertation</a> &middot; 
                 <a href="https://www.youtube.com/watch?v=lPcjQdSzKX4">video</a>
-            </p>
-        </aside>
-    </section>
+                </p>
+            </div>
+        </div>
 
-    <section>
-        <img class='sixth' src="part_2_diss.jpg" style="margin-bottom:1rem;">
-        <aside class='five-sixths omega'>
-            <p>
+        <div class=flex-container>
+            <img class='img-sml' src="part_2_diss.jpg">
+            <div>
+                <p>
                 <a href="/assets/eww23_part2_diss.pdf"> 3D Fractal Exploration using a Scale-Adaptive Sparse Voxel Octree</a> <br/>
                 <b>Erroll Wood</b>, Alex Benton, Peter Robinson <br/>
                 <i>University of Cambridge, CST Part II (BA dissertation)</i> <br/>
-                <a href="/assets/eww23_part2_diss.pdf">dissertation</a>
-                <a href="https://code.google.com/p/3d-fractal-explorer/">code</a>
+                <a href="/assets/eww23_part2_diss.pdf">dissertation</a> &middot; 
+                <a href="https://code.google.com/p/3d-fractal-explorer/">code</a> &middot; 
                 <a href="https://www.youtube.com/watch?v=oFAiiiJTo50">video</a>
-            </p>
-        </aside>
+                </p>
+            </div>
+        </div>
+
     </section>
 </body>
 </html>
