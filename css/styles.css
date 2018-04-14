@@ -67,6 +67,12 @@ h2 {
   max-width: 8rem;
 }
 
+.img-row {
+  max-width: 12rem;
+  margin-right: 0.5rem;
+  margin-bottom: 1rem;
+}
+
 p:first-child {
   margin-top: 0;
 }
@@ -107,7 +113,6 @@ header span {
   font-weight: 500;
   color: #e91e63;
 }
-
 
 /*nav mobile only shown on smaller screens*/
 
